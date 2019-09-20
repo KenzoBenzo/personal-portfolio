@@ -7,15 +7,15 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-
+import Footer from "./footer"
 import "./layout.css"
 
 const Layout = ({ children }) => {
   return (
     <>
-      {/* footer goes here */}
+      {/* header goes here */}
       <main>{children}</main>
-      {/* footer goes here */}
+      <Footer />
     </>
   )
 }
