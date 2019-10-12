@@ -36,6 +36,14 @@ module.exports = {
         icon: `src/images/kennaFavicon.png`,
       },
     },
+    {
+      resolve: `gatsby-source-dribbble`,
+      options: {
+        // You can get your Access Token by following this tutorial: http://developer.dribbble.com/v2/oauth/
+        access_token:
+          "15857a7dff290d186214cbde2043338fadb5ecd69ef5ae99e6417262bc54f966",
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

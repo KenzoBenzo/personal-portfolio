@@ -1,4 +1,3 @@
-import React from "react"
 import { theme } from "@chakra-ui/core"
 import customIcons from "./IconPaths"
 
@@ -74,7 +73,6 @@ const customTheme = {
     base: "1",
     shorter: "1.25",
     short: "1.375",
-    base: "1.5",
     tall: "1.625",
     taller: "2",
   },

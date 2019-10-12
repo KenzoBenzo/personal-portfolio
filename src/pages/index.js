@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import makenna from "../images/KennaSmutz.jpg"
 import styled from "styled-components"
 import ProjectCard from "../components/ProjectCard"
+import DribbbleCard from "../components/DribbbleCard"
 import { StaticQuery, graphql } from "gatsby"
 import { Image, Flex } from "@chakra-ui/core"
 
@@ -24,6 +25,14 @@ export default () => (
             type
             body {
               markdown
+            }
+          }
+        }
+        allDribleProjects {
+          edges {
+            node {
+              cover
+              url
             }
           }
         }
@@ -70,8 +79,36 @@ export default () => (
             <span style={{ background: "#F4CBC3", padding: "0 2px" }}>
               DOING
             </span>
-            .
+            . In the future, I'd like to work with design systems more.
           </p>
+        </div>
+
+        <div style={{ padding: "64px 32px" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: 48,
+              fontWeight: 600,
+              marginBottom: 0,
+            }}
+          >
+            My Dribbble Shots
+          </h2>
+          <Flex
+            align="center"
+            justify="center"
+            wrap="wrap"
+            maxW={1000}
+            m="32px auto 0px auto"
+          >
+            {data.allDribleProjects.edges.map((card, index) => (
+              <DribbbleCard
+                key={index}
+                cover={card.node.cover}
+                url={card.node.url}
+              />
+            ))}
+          </Flex>
         </div>
 
         <div style={{ padding: "64px 32px" }}>
