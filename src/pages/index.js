@@ -33,8 +33,6 @@ export default () => (
             node {
               cover
               url
-              title
-              description
             }
           }
         }
@@ -81,7 +79,7 @@ export default () => (
             <span style={{ background: "#F4CBC3", padding: "0 2px" }}>
               DOING
             </span>
-            .
+            . In the future, I'd like to work with design systems more.
           </p>
         </div>
 
@@ -96,17 +94,21 @@ export default () => (
           >
             My Dribbble Shots
           </h2>
-          <CardGroup>
+          <Flex
+            align="center"
+            justify="center"
+            wrap="wrap"
+            maxW={1000}
+            m="32px auto 0px auto"
+          >
             {data.allDribleProjects.edges.map((card, index) => (
               <DribbbleCard
                 key={index}
                 cover={card.node.cover}
                 url={card.node.url}
-                title={card.node.title}
-                description={card.node.description}
               />
             ))}
-          </CardGroup>
+          </Flex>
         </div>
 
         <div style={{ padding: "64px 32px" }}>
