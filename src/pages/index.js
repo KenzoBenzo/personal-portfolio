@@ -6,7 +6,7 @@ import styled from "styled-components"
 import ProjectCard from "../components/ProjectCard"
 import DribbbleCard from "../components/DribbbleCard"
 import { StaticQuery, graphql } from "gatsby"
-import { Image, Flex } from "@chakra-ui/core"
+import { Image, Flex, Button } from "@chakra-ui/core"
 
 const CardGroup = styled.div`
   max-width: 1000px;
@@ -81,6 +81,17 @@ export default () => (
             </span>
             . In the future, I'd like to work with design systems more.
           </p>
+          <Flex justifyContent="center" m={8}>
+            <Button
+              as="a"
+              target="_blank"
+              href="mailto:makennasmutz@gmail.com?subject=I want to work together!"
+              variantColor="primary"
+              size="lg"
+            >
+              Get in Touch
+            </Button>
+          </Flex>
         </div>
 
         <div style={{ padding: "64px 32px" }}>

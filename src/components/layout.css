@@ -33,4 +33,6 @@ a {
   line-height: 150%;
   font-weight: 400;
   margin-bottom: 0;
+  text-decoration: none;
+  color: inherit;
 }
