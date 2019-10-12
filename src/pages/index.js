@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import makenna from "../images/KennaSmutz.jpg"
 import styled from "styled-components"
 import ProjectCard from "../components/ProjectCard"
+import DribbbleCard from "../components/DribbbleCard"
 import { StaticQuery, graphql } from "gatsby"
 import { Image, Flex } from "@chakra-ui/core"
 
@@ -82,6 +83,30 @@ export default () => (
             </span>
             .
           </p>
+        </div>
+
+        <div style={{ padding: "64px 32px" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: 48,
+              fontWeight: 600,
+              marginBottom: 0,
+            }}
+          >
+            My Dribbble Shots
+          </h2>
+          <CardGroup>
+            {data.allDribleProjects.edges.map((card, index) => (
+              <DribbbleCard
+                key={index}
+                cover={card.node.cover}
+                url={card.node.url}
+                title={card.node.title}
+                description={card.node.description}
+              />
+            ))}
+          </CardGroup>
         </div>
 
         <div style={{ padding: "64px 32px" }}>
