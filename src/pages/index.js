@@ -27,6 +27,16 @@ export default () => (
             }
           }
         }
+        allDribleProjects {
+          edges {
+            node {
+              cover
+              url
+              title
+              description
+            }
+          }
+        }
       }
     `}
     render={data => (
