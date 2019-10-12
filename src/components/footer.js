@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { StaticQuery, graphql } from "gatsby"
+import { Flex, Button } from "@chakra-ui/core"
 
 const Footer = styled.footer`
   background: #03005c;
@@ -14,6 +15,7 @@ const Footer = styled.footer`
 
 const LinkGroup = styled.div`
   text-align: center;
+  margin: 0 64px;
   p {
     font-family: "Victor Mono";
     font-style: italic;
@@ -25,6 +27,7 @@ const LinkGroup = styled.div`
     color: inherit;
     text-decoration: none;
     display: block;
+    margin-bottom: 4px;
   }
 `
 
@@ -52,48 +55,56 @@ export default () => (
     `}
     render={data => (
       <Footer>
-        <LinkGroup>
-          <p>Social</p>
-          {data.gcms.social.map((link, index) => (
-            <a
-              href={link.slug}
-              target="_blank"
-              rel="noopener noreferrer"
-              key={index}
-            >
-              {/* {iconName ? <img src={link.iconName} /> : null} */}
-              {link.name}
-            </a>
-          ))}
-        </LinkGroup>
-        <LinkGroup>
-          <p>Contact</p>
-          {data.gcms.contact.map((link, index) => (
-            <a
-              href={link.slug}
-              target="_blank"
-              rel="noopener noreferrer"
-              key={index}
-            >
-              {/* {iconName ? <img src={link.iconName} /> : null} */}
-              {link.name}
-            </a>
-          ))}
-        </LinkGroup>
-        <LinkGroup>
-          <p>Work</p>
-          {data.gcms.work.map((link, index) => (
-            <a
-              href={link.slug}
-              target="_blank"
-              rel="noopener noreferrer"
-              key={index}
-            >
-              {/* {iconName ? <img src={link.iconName} /> : null} */}
-              {link.name}
-            </a>
-          ))}
-        </LinkGroup>
+        <Flex wrap="wrap" justify="space-around" size="1000">
+          <LinkGroup>
+            <p>Social</p>
+            {data.gcms.social.map((link, index) => (
+              <Button
+                as="a"
+                target="_blank"
+                variant="link"
+                href={link.slug}
+                rel="noopener noreferrer"
+                leftIcon={link.iconName}
+                key={index}
+              >
+                {link.name}
+              </Button>
+            ))}
+          </LinkGroup>
+          <LinkGroup>
+            <p>Contact</p>
+            {data.gcms.contact.map((link, index) => (
+              <Button
+                as="a"
+                target="_blank"
+                variant="link"
+                href={link.slug}
+                rel="noopener noreferrer"
+                leftIcon={link.iconName}
+                key={index}
+              >
+                {link.name}
+              </Button>
+            ))}
+          </LinkGroup>
+          <LinkGroup>
+            <p>Work</p>
+            {data.gcms.work.map((link, index) => (
+              <Button
+                as="a"
+                target="_blank"
+                variant="link"
+                href={link.slug}
+                rel="noopener noreferrer"
+                leftIcon={link.iconName}
+                key={index}
+              >
+                {link.name}
+              </Button>
+            ))}
+          </LinkGroup>
+        </Flex>
       </Footer>
     )}
   />

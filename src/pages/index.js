@@ -5,16 +5,7 @@ import makenna from "../images/KennaSmutz.jpg"
 import styled from "styled-components"
 import ProjectCard from "../components/ProjectCard"
 import { StaticQuery, graphql } from "gatsby"
-
-const Image = styled.img`
-  height: 150px;
-  width: 150px;
-  clip-path: circle(50% at 50% 50%);
-  border: 1px solid #bcccdc;
-  border-radius: 100%;
-  display: flex;
-  margin: 0 auto;
-`
+import { Image, Flex } from "@chakra-ui/core"
 
 const CardGroup = styled.div`
   max-width: 1000px;
@@ -41,8 +32,21 @@ export default () => (
     render={data => (
       <Layout>
         <SEO title="Home" />
-        <div style={{ padding: "64px 32px" }}>
-          <Image src={makenna} alt="Makenna Smutz Profile Image" />
+        <div
+          style={{
+            padding: "64px 32px",
+          }}
+        >
+          <Flex>
+            <Image
+              rounded="full"
+              size="150px"
+              src={makenna}
+              alt="Makenna Smutz Profile Image"
+              border="1px solid #BCCCDC"
+              mx="auto"
+            />
+          </Flex>
           <h1
             style={{
               textAlign: "center",
@@ -63,7 +67,10 @@ export default () => (
             }}
           >
             I design and code. I am a generalist that specializes in{" "}
-            <span style={{ background: "#F4CBC3" }}>DOING</span>.
+            <span style={{ background: "#F4CBC3", padding: "0 2px" }}>
+              DOING
+            </span>
+            .
           </p>
         </div>
 
