@@ -6,7 +6,7 @@ import styled from "styled-components"
 import ProjectCard from "../components/ProjectCard"
 import DribbbleCard from "../components/DribbbleCard"
 import { StaticQuery, graphql } from "gatsby"
-import { Image, Flex, Button } from "@chakra-ui/core"
+import { Image, Flex, Button, Link, Icon } from "@chakra-ui/core"
 
 const CardGroup = styled.div`
   max-width: 1000px;
@@ -23,12 +23,9 @@ export default () => (
             slug
             summary
             type
-            body {
-              markdown
-            }
           }
         }
-        allDribleProjects {
+        allDribleProjects(limit: 12) {
           edges {
             node {
               cover
@@ -119,6 +116,15 @@ export default () => (
                 url={card.node.url}
               />
             ))}
+            <Link
+              target="_blank"
+              fontSize="lg"
+              href="https://dribbble.com/KennaSmutz"
+              m="32px 0 0 0"
+              isExternal
+            >
+              See more <Icon name="external-link" mx="2px" />
+            </Link>
           </Flex>
         </div>
 
@@ -140,7 +146,7 @@ export default () => (
                 rawTags={card.type}
                 title={card.title}
                 summary={card.summary}
-                link={`/${card.slug}/`}
+                link={`/projects/${card.slug}/`}
               />
             ))}
           </CardGroup>

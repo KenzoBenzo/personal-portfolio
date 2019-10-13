@@ -59,7 +59,7 @@ const customTheme = {
     xl: "20px",
     "2xl": "24px",
     "3xl": "28px",
-    "4xl": "36px",
+    "4xl": "32px",
     "5xl": "48px",
     "6xl": "64px",
   },
@@ -69,6 +69,7 @@ const customTheme = {
     bold: 700,
   },
   lineHeights: {
+    tiny: "0.8",
     normal: "normal",
     base: "1",
     shorter: "1.25",
