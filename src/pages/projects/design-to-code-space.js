@@ -1,5 +1,5 @@
 import React from "react"
-import { Text, Stack, Button } from "@chakra-ui/core"
+import { Text, Stack, Button, Flex } from "@chakra-ui/core"
 import Layout from "../../components/layout"
 import { StaticQuery, graphql } from "gatsby"
 import ReactMarkdown from "react-markdown"
@@ -73,6 +73,13 @@ export default () => (
             />
           </ImgWrapper>
         </Stack>
+        <Flex justify="center">
+          <Link to="/">
+            <Button variantColor="primary" size="lg" m={8}>
+              Go back home
+            </Button>
+          </Link>
+        </Flex>
       </Layout>
     )}
   />
