@@ -17,7 +17,7 @@ const LinkGroup = styled.div`
   text-align: center;
   margin: 0 64px;
   p {
-    font-family: "Victor Mono";
+    font-family: "Inter var";
     font-style: italic;
     font-weight: 700;
     color: #f4cbc3;

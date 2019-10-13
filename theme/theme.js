@@ -48,7 +48,7 @@ const customTheme = {
   },
   fonts: {
     body: "system-ui, sans-serif",
-    heading: "Georgia, serif",
+    heading: "Inter var, sans-serif",
     mono: "Menlo, monospace",
   },
   fontSizes: {

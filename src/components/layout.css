@@ -21,14 +21,13 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Victor Mono", serif;
-  font-style: italic;
+  font-family: "Inter var", sans-serif;
   margin-bottom: 0;
 }
 
 p,
 a {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter var", sans-serif;
   font-size: 20px;
   line-height: 150%;
   font-weight: 400;

@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Makenna's Portfolio`,
     description: `As a place to currate design and code acomplishments in my career, I've built this portfolio. The stack is Gatsby and GraphCMS. Email me makennasmutz@gmail.com`,
-    author: `Makenna Smutz @kenzsmutz`,
+    author: `Makenna Smutz <makennasmutz@gmail.com>`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -39,13 +39,9 @@ module.exports = {
     {
       resolve: `gatsby-source-dribbble`,
       options: {
-        // You can get your Access Token by following this tutorial: http://developer.dribbble.com/v2/oauth/
         access_token:
           "15857a7dff290d186214cbde2043338fadb5ecd69ef5ae99e6417262bc54f966",
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }
