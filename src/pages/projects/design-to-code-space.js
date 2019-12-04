@@ -1,42 +1,20 @@
 import React from "react"
-import { Text, Stack, Button, Flex } from "@chakra-ui/core"
+import { Text, Stack, Button, Flex, Box } from "@chakra-ui/core"
 import Layout from "../../components/layout"
 import { StaticQuery, graphql } from "gatsby"
 import ReactMarkdown from "react-markdown"
-import styled from "styled-components"
 import { Link } from "gatsby"
 
-const Tags = styled.div`
-  display: flex;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 1.4;
+// a {
+//   transition: all 0.2s;
+//   font-size: 16px;
+// }
 
-  p {
-    border: 2px solid #f4cbc3;
-    border-radius: 0px 10px;
-    padding: 8px 16px;
-    margin-right: 8px;
-    height: fit-content;
-  }
-`
-
-const ImgWrapper = styled.div`
-  img {
-    border-radius: 10px;
-  }
-
-  a {
-    transition: all 0.2s;
-    font-size: 16px;
-  }
-
-  a:hover {
-    background: #f4cbc3;
-    padding: 2px;
-    border-radius: 2px;
-  }
-`
+// a:hover {
+//   background: #f4cbc3;
+//   padding: 2px;
+//   border-radius: 2px;
+// }
 
 export default () => (
   <StaticQuery
@@ -59,19 +37,32 @@ export default () => (
           <Text fontSize="5xl" textAlign="center" mb="0" lineHeight="base">
             {data.gcms.portfolioCard.title}
           </Text>
-          <Tags>
+          <Box display="flex" lineHeight="short">
             {data.gcms.portfolioCard.type.map(i => {
-              return <p>{i}</p>
+              return (
+                <Text
+                  border="2px solid"
+                  fontWeight="bold"
+                  borderColor="accent.500"
+                  borderTopRightRadius={10}
+                  borderBottomLeftRadius={10}
+                  py={2}
+                  px={4}
+                  mr={4}
+                  fontSize="2xl"
+                  lineHeight="short"
+                >
+                  {i}
+                </Text>
+              )
             })}
-          </Tags>
+          </Box>
         </Stack>
         <Stack maxW={1000} m="0 auto" p="64px 32px">
-          <ImgWrapper>
-            <ReactMarkdown
-              source={data.gcms.portfolioCard.body.markdown}
-              escapeHtml={false}
-            />
-          </ImgWrapper>
+          <ReactMarkdown
+            source={data.gcms.portfolioCard.body.markdown}
+            escapeHtml={false}
+          />
         </Stack>
         <Flex justify="center">
           <Link to="/">

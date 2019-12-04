@@ -7,7 +7,7 @@ const DribbbleCard = ({ url, cover }) => (
     <Image
       src={cover}
       alt="Dribbble Shot from Makenna Smutz"
-      fallbackSrc="https://via.placeholder.com/150"
+      fallbackSrc="https://via.placeholder.com/300x225"
       rounded={10}
       m={4}
       height={225}

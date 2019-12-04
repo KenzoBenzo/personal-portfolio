@@ -1,35 +1,6 @@
 import React from "react"
-import styled from "styled-components"
 import { StaticQuery, graphql } from "gatsby"
-import { Flex, Button } from "@chakra-ui/core"
-
-const Footer = styled.footer`
-  background: #03005c;
-  color: #fff;
-  margin-bottom: 0;
-  padding: 64px 32px;
-  display: flex;
-  justify-content: space-around;
-  align-content: flex-start;
-`
-
-const LinkGroup = styled.div`
-  text-align: center;
-  margin: 0 64px;
-  p {
-    font-family: "Inter var";
-    font-style: italic;
-    font-weight: 700;
-    color: #f4cbc3;
-    text-decoration: underline;
-  }
-  a {
-    color: inherit;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 4px;
-  }
-`
+import { Box, Flex, Button, Text, Stack } from "@chakra-ui/core"
 
 export default () => (
   <StaticQuery
@@ -54,15 +25,27 @@ export default () => (
       }
     `}
     render={data => (
-      <Footer>
+      <Box
+        as="footer"
+        bg="primary.500"
+        px={16}
+        py={8}
+        d="flex"
+        justifyContent="space-around"
+        alignContent="flex-start"
+      >
         <Flex wrap="wrap" justify="space-around" size="1000">
-          <LinkGroup>
-            <p>Social</p>
+          <Stack textAlign="center" mx={16} my={0}>
+            <Text fontWeight="bold" color="accent.500" as="u">
+              Social
+            </Text>
             {data.gcms.social.map((link, index) => (
               <Button
                 as="a"
                 target="_blank"
                 variant="link"
+                color="white"
+                pb={2}
                 href={link.slug}
                 rel="noopener noreferrer"
                 leftIcon={link.iconName}
@@ -71,14 +54,18 @@ export default () => (
                 {link.name}
               </Button>
             ))}
-          </LinkGroup>
-          <LinkGroup>
-            <p>Contact</p>
+          </Stack>
+          <Stack textAlign="center" mx={16} my={0}>
+            <Text fontWeight="bold" color="accent.500" as="u">
+              Contact
+            </Text>
             {data.gcms.contact.map((link, index) => (
               <Button
                 as="a"
                 target="_blank"
                 variant="link"
+                color="white"
+                pb={2}
                 href={link.slug}
                 rel="noopener noreferrer"
                 leftIcon={link.iconName}
@@ -87,14 +74,18 @@ export default () => (
                 {link.name}
               </Button>
             ))}
-          </LinkGroup>
-          <LinkGroup>
-            <p>Work</p>
+          </Stack>
+          <Stack textAlign="center" mx={16} my={0}>
+            <Text fontWeight="bold" color="accent.500" as="u">
+              Work
+            </Text>
             {data.gcms.work.map((link, index) => (
               <Button
                 as="a"
                 target="_blank"
                 variant="link"
+                color="white"
+                pb={2}
                 href={link.slug}
                 rel="noopener noreferrer"
                 leftIcon={link.iconName}
@@ -103,9 +94,9 @@ export default () => (
                 {link.name}
               </Button>
             ))}
-          </LinkGroup>
+          </Stack>
         </Flex>
-      </Footer>
+      </Box>
     )}
   />
 )
