@@ -1,5 +1,6 @@
 import { theme } from "@chakra-ui/core"
 import customIcons from "./IconPaths"
+// import customColors from "./CustomColors"
 
 const customTheme = {
   ...theme,
@@ -78,6 +79,20 @@ const customTheme = {
       700: "#00AA98",
       800: "#008988",
       900: "#006771",
+    },
+    mode: {
+      light: {
+        logo: "#102a43",
+        background: "#fff",
+        text: "#334E68",
+        cardBG: "#F6FAFF",
+      },
+      dark: {
+        logo: "#ffffff",
+        background: "#102a43",
+        text: "#F6FAFF",
+        cardBG: "#334E68",
+      },
     },
   },
   fonts: {

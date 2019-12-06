@@ -27,11 +27,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `kennas-personal-portfolio`,
+        short_name: `Makenna Smutz`,
         start_url: `/`,
-        background_color: `#F6FAFF`,
-        theme_color: `#03005C`,
+        background_color: `#FFF`,
+        theme_color: `#9F00FF`,
         display: `minimal-ui`,
         icon: `src/images/kennaFavicon.png`,
       },
