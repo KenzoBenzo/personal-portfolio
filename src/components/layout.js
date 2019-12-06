@@ -1,5 +1,5 @@
 import React from "react"
-import Footer from "./footer"
+import Footer from "./organisms/footer"
 import Banner from "./organisms/banner"
 import Navigation from "./organisms/navigation"
 import "./layout.css"
@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/core"
 import customTheme from "../../theme/theme"
 
-export default function Layout() {
+export default function Layout({ children }) {
   return (
     <ThemeProvider theme={customTheme}>
       <CSSReset />
@@ -20,6 +20,7 @@ export default function Layout() {
         <AppContainer>
           <Banner />
           <Navigation />
+          {children}
         </AppContainer>
         <Footer />
       </ColorModeProvider>
@@ -30,33 +31,9 @@ export default function Layout() {
 function AppContainer({ children }) {
   const { colorMode } = useColorMode()
   const brandColorTheme = customTheme.colors.mode[colorMode]
-  console.log(colorMode)
   return (
-    <Stack height="100vh" backgroundColor={brandColorTheme.background}>
+    <Stack minH="100vh" backgroundColor={brandColorTheme.background}>
       {children}
     </Stack>
   )
 }
-
-// const Layout = ({ children }) => {
-//   const { colorMode } = useColorMode()
-//   console.log(colorMode)
-//   return (
-//     <ThemeProvider theme={customTheme}>
-//       <CSSReset />
-//       <ColorModeProvider value={colorMode}>
-//         <Stack
-//           height="100vh"
-//           backgroundColor={customTheme.colors.mode[colorMode].background}
-//         >
-//           <Banner />
-//           <Navigation />
-//           {children}
-//         </Stack>
-//         <Footer />
-//       </ColorModeProvider>
-//     </ThemeProvider>
-//   )
-// }
-
-// export default Layout
