@@ -33,8 +33,12 @@ export default () => (
         d="flex"
         justifyContent="space-around"
         alignContent="flex-start"
+        pos="absolute"
+        bottom="0"
+        left="0"
+        right="0"
       >
-        <Flex wrap="wrap" justify="space-around" size="1000">
+        <Flex wrap="wrap" justify="space-around">
           <Stack textAlign="center" mx={16} my={0}>
             <Text fontWeight="bold" color="accent.500" as="u">
               Social
