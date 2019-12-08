@@ -1,18 +1,12 @@
-const React = require("react")
-const customTheme = require("./theme/theme")
-const {
-  ColorModeProvider,
-  ThemeProvider,
-  CSSReset,
-} = require("@chakra-ui/core")
+import React from "react"
+import { ThemeProvider, ColorModeProvider, CSSReset } from "@chakra-ui/core"
+import theme from "./theme/theme"
 
-exports.wrapRootElement = ({ element }) => {
-  return (
-    <ThemeProvider theme={customTheme}>
-      <ColorModeProvider>
-        <CSSReset />
-        {element}
-      </ColorModeProvider>
-    </ThemeProvider>
-  )
-}
+export const wrapRootElement = ({ element }) => (
+  <ThemeProvider theme={theme}>
+    <ColorModeProvider>
+      <CSSReset />
+      {element}
+    </ColorModeProvider>
+  </ThemeProvider>
+)

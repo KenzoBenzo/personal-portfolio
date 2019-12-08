@@ -32,7 +32,7 @@ const Homepage = () => {
           <Heading mb={8} lineHeight="shorter" fontWeight="900">
             Placeholder heading tagline.
           </Heading>
-          <Text lineHeight="tall" mb={10}>
+          <Text color={`mode.${colorMode}.text`} lineHeight="tall" mb={10}>
             This product is the best thing ever and you should definitely use
             it. Seriously, no need to keep reading.
           </Text>
