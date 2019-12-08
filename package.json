@@ -30,12 +30,13 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
     "develop": "gatsby develop",
+    "prodserve": "gatsby build && gatsby serve",
+    "cleandev": "rm -rf node_modules .cache && yarn && gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
-    "serve": "gatsby serve",
-    "cleandev": "rm -rf node_modules .cache && yarn && gatsby develop"
+    "build": "gatsby build",
+    "serve": "gatsby serve"
   },
   "repository": {
     "type": "git",
