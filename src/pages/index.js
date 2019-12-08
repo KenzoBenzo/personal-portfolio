@@ -27,7 +27,7 @@ const Homepage = () => {
         alignItems="center"
         py={16}
       >
-        <Image size="400px" src={illustration} alt="kenna's headshot" mr={16} />
+        {/* <Image size="400px" src={illustration} alt="kenna's headshot" mr={16} /> */}
         <Box>
           <Heading mb={8} lineHeight="shorter" fontWeight="900">
             Placeholder heading tagline.
