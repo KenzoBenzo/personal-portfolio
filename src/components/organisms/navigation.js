@@ -39,6 +39,7 @@ const Navigation = () => {
           fontSize="20px"
           onClick={toggleColorMode}
           icon={colorMode === "light" ? "moon" : "sun"}
+          transition="all 0.2s"
         />
       </Stack>
     </Flex>
