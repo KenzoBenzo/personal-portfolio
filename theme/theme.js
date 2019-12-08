@@ -66,6 +66,7 @@ const customTheme = {
     "4": "1rem",
     "5": "1.5rem",
     "6": "2rem",
+    "8": "2.5em",
     "10": "3rem",
     "11": "3.5rem",
     "12": "4rem",

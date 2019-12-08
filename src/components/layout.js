@@ -9,7 +9,6 @@ import customTheme from "../../theme/theme"
 export default function Layout({ children }) {
   const { colorMode } = useColorMode()
   const brandColorTheme = customTheme.colors.mode[colorMode]
-  console.log(colorMode + " layout")
   return (
     <>
       <Stack minH="90vh" backgroundColor={brandColorTheme.background}>
