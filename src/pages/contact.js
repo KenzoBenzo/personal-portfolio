@@ -7,7 +7,6 @@ import {
   Textarea,
   InputGroup,
   InputLeftAddon,
-  InputRightAddon,
   Button,
   LightMode,
   Box,
@@ -18,7 +17,7 @@ const ContactPage = () => {
   const { colorMode } = useColorMode()
   return (
     <Layout>
-      <Box maxW="1000px" mx="auto">
+      <Box maxW="1000px" mx="auto" py={16} px={8}>
         <Heading
           as="h2"
           lineHeight="shorter"
@@ -81,7 +80,6 @@ const ContactPage = () => {
                 name="website"
                 placeholder="company-site"
               />
-              <InputRightAddon children=".com" />
             </InputGroup>
           </Box>
           <LightMode>

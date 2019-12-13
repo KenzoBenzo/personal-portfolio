@@ -13,6 +13,8 @@ import {
   IconButton,
 } from "@chakra-ui/core"
 
+import { Link as GatsbyLink } from "gatsby"
+
 export default () => {
   const { colorMode } = useColorMode()
   return (
@@ -107,7 +109,9 @@ export default () => {
             </Flex>
             <Divider borderColor="gray.300" mb={4} mt={4} />
             <Flex justifyContent="space-between">
-              <Icon name="Logo" color="gray.500" size={10} w={24} />
+              <GatsbyLink to="/">
+                <Icon name="Logo" color="gray.500" size={10} w={24} />
+              </GatsbyLink>
               <Stack isInline>
                 <IconButton icon="twitter" isRound color="gray.500" />
                 <IconButton icon="linkedin" isRound color="gray.500" />

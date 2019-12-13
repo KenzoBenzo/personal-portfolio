@@ -7,6 +7,7 @@ import {
   Flex,
   useColorMode,
 } from "@chakra-ui/core"
+import { Link } from "gatsby"
 
 const Navigation = () => {
   const { colorMode, toggleColorMode } = useColorMode()
@@ -18,14 +19,20 @@ const Navigation = () => {
       justifyContent="space-between"
       background={`mode${colorMode}.background`}
     >
-      <Icon name="Logo" color={`mode.${colorMode}.logo`} size={10} w={32} />
+      <Link to="/">
+        <Icon name="Logo" color={`mode.${colorMode}.logo`} size={10} w={32} />
+      </Link>
       <Stack isInline>
-        <Button variantColor="gray" variant="ghost">
-          About me
-        </Button>
-        <Button variantColor="gray" variant="ghost">
-          Contact
-        </Button>
+        <Link to="/about-me/">
+          <Button variantColor="gray" variant="ghost">
+            About me
+          </Button>
+        </Link>
+        <Link to="/contact/">
+          <Button variantColor="gray" variant="ghost">
+            Contact
+          </Button>
+        </Link>
         <Button variantColor="gray" variant="ghost">
           My work
         </Button>
