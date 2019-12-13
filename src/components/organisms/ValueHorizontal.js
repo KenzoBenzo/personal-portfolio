@@ -1,7 +1,7 @@
 import React from "react"
 import { useColorMode, Box, Heading, Stack } from "@chakra-ui/core"
 
-import ValueCard from "../molecules/ValueCard"
+import ValueCard from "../molecules/FeatureCard"
 
 const ValueSection = ({ ...features }) => {
   const { colorMode } = useColorMode()

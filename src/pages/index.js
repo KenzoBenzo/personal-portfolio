@@ -11,6 +11,7 @@ import {
   LightMode,
   Link,
   Flex,
+  Image,
 } from "@chakra-ui/core"
 
 import Hero from "../components/organisms/hero"
@@ -21,6 +22,10 @@ import ValueSection from "../components/organisms/ValueHorizontal"
 import Testimonial from "../components/molecules/TestimonialCard"
 import zach from "../static/zach.jpeg"
 import matija from "../static/matija.jpeg"
+
+import Skill from "../components/molecules/SkillCard"
+
+import kenna from "../static/KennaSmutz.jpg"
 
 const Homepage = () => {
   const { colorMode } = useColorMode()
@@ -64,7 +69,7 @@ const Homepage = () => {
       <ValueSection {...features} />
 
       {/* Testimonials Section */}
-      <Box maxW="1000px" mx="auto" py={16}>
+      <Box maxW="1000px" mx="auto" py={16} px={8}>
         <Heading
           as="h2"
           mb={8}
@@ -87,6 +92,40 @@ const Homepage = () => {
             avatar={matija}
           />
         </Stack>
+      </Box>
+
+      {/* Skill Set section */}
+      <Box maxW="1000px" mx="auto" py={16} px={8}>
+        <Heading
+          as="h2"
+          mb={8}
+          lineHeight="shorter"
+          fontWeight="900"
+          color={`mode.${colorMode}.heading`}
+          textAlign="center"
+        >
+          Things Kenna can do well
+        </Heading>
+        <Flex wrap="wrap">
+          <Image src={kenna} height="300px" rounded="lg" mr={[0, 16]} />
+          <Stack spacing={6}>
+            <Skill
+              icon="abstract1"
+              title="Web Design"
+              description="description goes here. this is a placeholder"
+            />
+            <Skill
+              icon="abstract2"
+              title="Frontend Development"
+              description="description goes here. this is a placeholder"
+            />
+            <Skill
+              icon="abstract3"
+              title="UX Focused"
+              description="description goes here. this is a placeholder"
+            />
+          </Stack>
+        </Flex>
       </Box>
 
       {/* Sales funnel capture, download CV Section */}
