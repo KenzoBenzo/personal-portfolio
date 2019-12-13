@@ -88,7 +88,7 @@ const iconPaths = {
         fill="currentColor"
       />
     ),
-    viewBox: "0 0 20 20",
+    viewBox: "0 0 16 16",
   },
   twitter: {
     path: (
@@ -97,7 +97,7 @@ const iconPaths = {
         fill="currentColor"
       />
     ),
-    viewBox: "0 0 20 20",
+    viewBox: "0 0 16 16",
   },
   instagram: {
     path: (
@@ -106,7 +106,7 @@ const iconPaths = {
         fill="currentColor"
       />
     ),
-    viewBox: "0 0 20 20",
+    viewBox: "0 0 16 16",
   },
   github: {
     path: (
@@ -115,7 +115,7 @@ const iconPaths = {
         fill="currentColor"
       />
     ),
-    viewBox: "0 0 20 20",
+    viewBox: "0 0 16 16",
   },
   dribbble: {
     path: (
@@ -124,7 +124,7 @@ const iconPaths = {
         fill="currentColor"
       />
     ),
-    viewBox: "0 0 20 20",
+    viewBox: "0 0 16 16",
   },
   "memphis-dots": {
     path: (

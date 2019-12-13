@@ -6,7 +6,7 @@ import { Heading, Box, Stack, useColorMode, Icon } from "@chakra-ui/core"
 import Hero from "../components/organisms/hero"
 import illustration from "../images/Illustration.png"
 
-import FeatureSection from "../components/organisms/FeaturesHorizontal"
+import ValueSection from "../components/organisms/ValueHorizontal"
 
 const Homepage = () => {
   const { colorMode } = useColorMode()
@@ -19,7 +19,7 @@ const Homepage = () => {
         title="Design.Code. "
         flare="Kenna."
         subtitle="A do-er that makes website creation seamless. Kenna is a bubbly 22 year old that excels in execution, design, and frontend development."
-        ctaText="Schedule Demo"
+        ctaText="Schedule a Call"
       />
 
       {/* Social proof section */}
@@ -47,7 +47,7 @@ const Homepage = () => {
       </Box>
 
       {/* Features Section */}
-      <FeatureSection {...features} />
+      <ValueSection {...features} />
     </Layout>
   )
 }

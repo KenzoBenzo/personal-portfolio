@@ -8,6 +8,9 @@ import {
   Stack,
   Link,
   useColorMode,
+  Divider,
+  Icon,
+  IconButton,
 } from "@chakra-ui/core"
 
 export default () => {
@@ -35,53 +38,84 @@ export default () => {
         }
       `}
       render={data => (
-        <Box
-          as="footer"
-          bg={`mode.${colorMode}.cardBG`}
-          px={16}
-          py={10}
-          d="flex"
-          justifyContent="space-around"
-          alignContent="flex-start"
-        >
-          <Flex wrap="wrap" justify="space-around">
-            <Stack textAlign="center" mx={16} my={0}>
-              <Text fontWeight="bold" color={`mode.${colorMode}.text`}>
-                Social
-              </Text>
-              {data.gcms.social.map((link, index) => (
-                <Link href={link.slug} key={index} isExternal>
-                  <Button variant="ghost" leftIcon={link.iconName}>
-                    {link.name}
-                  </Button>
-                </Link>
-              ))}
-            </Stack>
-            <Stack textAlign="center" mx={16} my={0}>
-              <Text fontWeight="bold" color={`mode.${colorMode}.text`}>
-                Contact
-              </Text>
-              {data.gcms.contact.map((link, index) => (
-                <Link href={link.slug} key={index} isExternal>
-                  <Button variant="ghost" leftIcon={link.iconName}>
-                    {link.name}
-                  </Button>
-                </Link>
-              ))}
-            </Stack>
-            <Stack textAlign="center" mx={16} my={0}>
-              <Text fontWeight="bold" color={`mode.${colorMode}.text`}>
-                Work
-              </Text>
-              {data.gcms.work.map((link, index) => (
-                <Link href={link.slug} key={index} isExternal>
-                  <Button variant="ghost" leftIcon={link.iconName}>
-                    {link.name}
-                  </Button>
-                </Link>
-              ))}
-            </Stack>
-          </Flex>
+        <Box as="footer" bg={`mode.${colorMode}.cardBG`} py={10}>
+          <Box maxW="1000px" mx="auto">
+            <Flex wrap="wrap" justify="space-around">
+              <Stack textAlign="center" mx={16} my={0}>
+                <Text fontWeight="900" color={`mode.${colorMode}.text`}>
+                  Social
+                </Text>
+                {data.gcms.social.map((link, index) => (
+                  <Link
+                    href={link.slug}
+                    key={index}
+                    isExternal
+                    _hover={{ textDecoration: "none" }}
+                  >
+                    <Button
+                      variant="ghost"
+                      leftIcon={link.iconName}
+                      color="gray.500"
+                    >
+                      {link.name}
+                    </Button>
+                  </Link>
+                ))}
+              </Stack>
+              <Stack textAlign="center" mx={16} my={0}>
+                <Text fontWeight="900" color={`mode.${colorMode}.text`}>
+                  Contact
+                </Text>
+                {data.gcms.contact.map((link, index) => (
+                  <Link
+                    href={link.slug}
+                    key={index}
+                    isExternal
+                    _hover={{ textDecoration: "none" }}
+                  >
+                    <Button
+                      variant="ghost"
+                      leftIcon={link.iconName}
+                      color="gray.500"
+                    >
+                      {link.name}
+                    </Button>
+                  </Link>
+                ))}
+              </Stack>
+              <Stack textAlign="center" mx={16} my={0}>
+                <Text fontWeight="900" color={`mode.${colorMode}.text`}>
+                  Work
+                </Text>
+                {data.gcms.work.map((link, index) => (
+                  <Link
+                    href={link.slug}
+                    key={index}
+                    isExternal
+                    _hover={{ textDecoration: "none" }}
+                  >
+                    <Button
+                      variant="ghost"
+                      leftIcon={link.iconName}
+                      color="gray.500"
+                    >
+                      {link.name}
+                    </Button>
+                  </Link>
+                ))}
+              </Stack>
+            </Flex>
+            <Divider borderColor="gray.300" mb={4} mt={4} />
+            <Flex justifyContent="space-between">
+              <Icon name="Logo" color="gray.500" size={10} w={24} />
+              <Stack isInline>
+                <IconButton icon="twitter" isRound color="gray.500" />
+                <IconButton icon="linkedin" isRound color="gray.500" />
+                <IconButton icon="github" isRound color="gray.500" />
+                <IconButton icon="dribbble" isRound color="gray.500" />
+              </Stack>
+            </Flex>
+          </Box>
         </Box>
       )}
     />

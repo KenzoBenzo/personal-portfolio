@@ -1,7 +1,7 @@
 import React from "react"
 import { Box, Icon, Heading, Text, useColorMode } from "@chakra-ui/core"
 
-const FeatureCard = ({ icon, title, description, ...props }) => {
+const ValueCard = ({ icon, title, description, ...props }) => {
   const { colorMode } = useColorMode
   return (
     <Box p={4} {...props}>
@@ -22,4 +22,4 @@ const FeatureCard = ({ icon, title, description, ...props }) => {
   )
 }
 
-export default FeatureCard
+export default ValueCard

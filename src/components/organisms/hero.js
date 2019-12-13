@@ -8,6 +8,8 @@ import {
   Text,
   Button,
   Stack,
+  LightMode,
+  Link,
 } from "@chakra-ui/core"
 
 const HeroComponent = ({ image, title, flare, subtitle, ctaText }) => {
@@ -29,6 +31,7 @@ const HeroComponent = ({ image, title, flare, subtitle, ctaText }) => {
           lineHeight="shorter"
           fontWeight="900"
           color={`mode.${colorMode}.heading`}
+          letterSpacing="wider"
         >
           {title} {flare ? <Text as="i">{flare}</Text> : null}
         </Heading>
@@ -36,9 +39,22 @@ const HeroComponent = ({ image, title, flare, subtitle, ctaText }) => {
           {subtitle}
         </Text>
         <Stack isInline>
-          <Button variantColor="primary" variant="solid">
-            {ctaText}
-          </Button>
+          <LightMode>
+            <Link
+              href="https://calendly.com/makennasmutz/chat?month=2019-12"
+              isExternal
+              _hover={{ textDecoration: "none" }}
+            >
+              <Button
+                variantColor="primary"
+                variant="solid"
+                fontWeight="600"
+                letterSpacing="tight"
+              >
+                {ctaText}
+              </Button>
+            </Link>
+          </LightMode>
         </Stack>
       </Box>
     </Flex>

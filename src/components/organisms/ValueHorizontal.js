@@ -1,9 +1,9 @@
 import React from "react"
 import { useColorMode, Box, Heading, Stack } from "@chakra-ui/core"
 
-import FeatureCard from "../molecules/FeatureCard"
+import ValueCard from "../molecules/ValueCard"
 
-const FeatureSection = ({ ...features }) => {
+const ValueSection = ({ ...features }) => {
   const { colorMode } = useColorMode()
   return (
     <Box maxW="1000px" mx="auto" py={16}>
@@ -18,17 +18,17 @@ const FeatureSection = ({ ...features }) => {
         What you get when working with Kenna
       </Heading>
       <Stack isInline>
-        <FeatureCard
+        <ValueCard
           icon={features[0].icon}
           title={features[0].title}
           description={features[0].description}
         />
-        <FeatureCard
+        <ValueCard
           icon={features[1].icon}
           title={features[1].title}
           description={features[1].description}
         />
-        <FeatureCard
+        <ValueCard
           icon={features[2].icon}
           title={features[2].title}
           description={features[2].description}
@@ -46,4 +46,4 @@ const FeatureSection = ({ ...features }) => {
   )
 }
 
-export default FeatureSection
+export default ValueSection
