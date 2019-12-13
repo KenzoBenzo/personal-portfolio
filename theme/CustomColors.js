@@ -82,6 +82,7 @@ const customColors = {
       text: "#334E68",
       heading: "#102a43",
       icon: "#9FB3C8",
+      link: "#9F00FF",
     },
     dark: {
       logo: "#ffffff",
@@ -90,6 +91,7 @@ const customColors = {
       text: "#EFF2FB",
       heading: "#fff",
       icon: "#486581",
+      link: "#EB99FF",
     },
   },
 }

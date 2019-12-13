@@ -35,7 +35,7 @@ const Navigation = () => {
         </Link>
         <Link to="/projects/">
           <Button variantColor="gray" variant="ghost">
-            My work
+            My projects
           </Button>
         </Link>
         <IconButton

@@ -1,10 +1,8 @@
 import React from "react"
 import {
   Heading,
-  Text,
   Flex,
   Link,
-  Icon,
   Stack,
   Box,
   useColorMode,
@@ -73,14 +71,14 @@ export default () => {
             isExternal
             _hover={{ textDecoration: "none" }}
           >
-            <Button rightIcon="external-link" variant="ghost" mt={6}>
+            <Button rightIcon="external-link" variant="ghost" mt={6} size="lg">
               See more
             </Button>
           </Link>
         </Flex>
       </Box>
 
-      <div style={{ padding: "64px 32px" }}>
+      <Box py={16} px={8}>
         <Heading
           as="h2"
           fontSize="4xl"
@@ -103,7 +101,7 @@ export default () => {
             />
           ))}
         </Stack>
-      </div>
+      </Box>
     </Layout>
   )
 }
