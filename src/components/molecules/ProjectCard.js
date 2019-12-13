@@ -1,55 +1,51 @@
 import React from "react"
-import { Link } from "gatsby"
-import { Box, Text } from "@chakra-ui/core"
+import { Link as GatsbyLink } from "gatsby"
+import {
+  Box,
+  Text,
+  Tag,
+  Stack,
+  useColorMode,
+  Heading,
+  Button,
+} from "@chakra-ui/core"
 
 const ProjectCard = ({ rawTags, title, summary, link }) => {
   let tags = rawTags.map(i => {
     return (
-      <Text
-        border="2px solid"
-        fontWeight="bold"
-        borderColor="accent.500"
-        borderTopRightRadius={8}
-        borderBottomLeftRadius={8}
-        py={2}
-        px={8}
-        mr={4}
-      >
+      <Tag variantColor="blue" size="md" fontWeight={600}>
         {i}
-      </Text>
+      </Tag>
     )
   })
+  const { colorMode } = useColorMode()
   return (
-    <Link
+    <GatsbyLink
       to={link}
       alt="A project by makenna"
-      style={{ color: "inherit", textDecoration: "none" }}
+      style={{ textDecoration: "none" }}
     >
-      <Box
-        bg="white"
-        p={8}
-        shadow="0px 0px 15px rgba(0, 0, 0, 0.05)"
-        borderRadius="lg"
-        mb={8}
-      >
+      <Box bg={`mode.${colorMode}.cardBG`} p={6} borderRadius="lg" mb={8}>
         {tags ? (
-          <Box
-            d="flex"
-            justifyContent="flex-end"
-            mt={-12}
-            mr={-12}
-            lineHeight="short"
-          >
+          <Stack isInline justifyContent="flex-end">
             {tags}
-          </Box>
+          </Stack>
         ) : null}
-        <Text fontSize="3xl" fontWeight="bold">
+        <Heading
+          as="h3"
+          fontSize="3xl"
+          fontWeight="900"
+          letterSpacing="wide"
+          mb={4}
+        >
           {title}
-        </Text>
-        <Text>{summary}</Text>
-        <Text fontWeight="bold">Dive Deep with the Details -></Text>
+        </Heading>
+        <Text mb={6}>{summary}</Text>
+        <Button rightIcon="arrow-forward" fontWeight="600" variant="ghost">
+          Dive Deep with the Details
+        </Button>
       </Box>
-    </Link>
+    </GatsbyLink>
   )
 }
 

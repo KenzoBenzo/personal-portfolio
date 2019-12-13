@@ -38,7 +38,7 @@ const AboutPage = () => {
             as="h2"
           >
             Hey, I'm Makenna{" "}
-            <span rol="img" aria-label="wave">
+            <span role="img" aria-labelledby="wave">
               👋
             </span>
           </Heading>
@@ -72,7 +72,7 @@ const AboutPage = () => {
         <List styleType="disc" mb={8} spacing={2}>
           <ListItem>
             Trampolining{" "}
-            <span rol="img" aria-label="kangaroo">
+            <span role="img" aria-labelledby="kangaroo">
               🦘
             </span>
             Fun fact, most trampoline parks have a <Text as="i">Pro</Text> area
@@ -80,22 +80,22 @@ const AboutPage = () => {
           </ListItem>
           <ListItem>
             Travelling{" "}
-            <span rol="img" aria-label="airplane">
+            <span role="img" aria-labelledby="airplane">
               ✈️
             </span>
           </ListItem>
           <ListItem>
             Guitar{" "}
-            <span rol="img" aria-label="guitar">
+            <span role="img" aria-labelledby="guitar">
               🎸
             </span>
           </ListItem>
           <ListItem>
             Snorkleing &amp; Surfing{" "}
-            <span rol="img" aria-label="tropical fish">
+            <span role="img" aria-labelledby="tropical fish">
               🐠
             </span>
-            <span rol="img" aria-label="female surfer">
+            <span role="img" aria-labelledby="female surfer">
               🏄‍♀️
             </span>
           </ListItem>
@@ -107,21 +107,21 @@ const AboutPage = () => {
         <List styleType="disc" mb={8} spacing={2}>
           <ListItem>
             I'm American{" "}
-            <span rol="img" aria-label="usa flag">
+            <span role="img" aria-labelledby="usa flag">
               🇺🇸
             </span>{" "}
             currently living in Switzerland{" "}
-            <span rol="img" aria-label="swiss flag">
+            <span role="img" aria-labelledby="swiss flag">
               🇨🇭
             </span>
           </ListItem>
           <ListItem>
             I met my wife{" "}
-            <span rol="img" aria-label="pride flag">
+            <span role="img" aria-labelledby="pride flag">
               🏳️‍🌈
             </span>{" "}
             in Costa Rica{" "}
-            <span rol="img" aria-label="costa rican flag">
+            <span role="img" aria-labelledby="costa rican flag">
               🇨🇷
             </span>
           </ListItem>

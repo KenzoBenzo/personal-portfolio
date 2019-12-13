@@ -37,7 +37,7 @@ const Homepage = () => {
         image={illustration}
         title="Design.Code. "
         flare="Kenna."
-        subtitle="A do-er that makes website creation seamless. Kenna is a bubbly 22 year old that excels in execution, design, and frontend development."
+        subtitle="A do-er that makes website creation seamless. Kenna is an energetic 22 year old that excels in execution, design, and frontend development."
         ctaText="Schedule a Call"
       />
 

@@ -1,5 +1,13 @@
 import React from "react"
-import { Text, Badge, Stack, Button, Flex, useColorMode } from "@chakra-ui/core"
+import {
+  Text,
+  Badge,
+  Stack,
+  Button,
+  Flex,
+  useColorMode,
+  Link,
+} from "@chakra-ui/core"
 
 const Banner = () => {
   const { colorMode } = useColorMode()
@@ -26,16 +34,22 @@ const Banner = () => {
           New GraphCMS Website Design
         </Text>
       </Flex>
-      <Button
-        as="a"
-        fontSize="sm"
-        size="sm"
-        m={0}
-        variantColor="primary"
-        variant="ghost"
+      <Link
+        href="https://dribbble.com/KennaSmutz"
+        _hover={{ textDecoration: "none" }}
+        isExternal
       >
-        Check out the post ->
-      </Button>
+        <Button
+          as="a"
+          fontSize="sm"
+          size="sm"
+          m={0}
+          variantColor="primary"
+          variant="ghost"
+        >
+          Check out the post ->
+        </Button>
+      </Link>
     </Stack>
   )
 }

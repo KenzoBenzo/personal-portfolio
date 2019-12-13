@@ -33,9 +33,11 @@ const Navigation = () => {
             Contact
           </Button>
         </Link>
-        <Button variantColor="gray" variant="ghost">
-          My work
-        </Button>
+        <Link to="/projects/">
+          <Button variantColor="gray" variant="ghost">
+            My work
+          </Button>
+        </Link>
         <IconButton
           aria-label={`Switch to ${
             colorMode === "light" ? "dark" : "light"
