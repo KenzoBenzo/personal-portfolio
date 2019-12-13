@@ -36,12 +36,12 @@ const ContactPage = () => {
           data-netlify-honeypot="bot-field"
         >
           <input type="hidden" name="bot-field" />
-          <input type="hidden" name="form-name" />
+          <input type="hidden" name="form-name" value="contact" />
           <Box>
             <FormLabel htmlFor="name">Your Name</FormLabel>
             <Input
               type="name"
-              id="name"
+              name="name"
               aria-describedby="name-helper-text"
               placeholder="Your name"
               size="lg"
@@ -52,7 +52,7 @@ const ContactPage = () => {
             <FormLabel htmlFor="email">Email address</FormLabel>
             <Input
               type="email"
-              id="email"
+              name="email"
               aria-describedby="email-helper-text"
               placeholder="Your email"
               size="lg"
@@ -63,6 +63,8 @@ const ContactPage = () => {
           <Box>
             <FormLabel>Message</FormLabel>
             <Textarea
+              type="message"
+              name="message"
               resize="none"
               placeholder="Type your message here..."
               size="lg"
@@ -73,7 +75,12 @@ const ContactPage = () => {
             <FormLabel>Which company are you from?</FormLabel>
             <InputGroup mb={8} size="lg">
               <InputLeftAddon children="https://" />
-              <Input rounded="0" placeholder="company-site" />
+              <Input
+                rounded="0"
+                type="webiste"
+                name="website"
+                placeholder="company-site"
+              />
               <InputRightAddon children=".com" />
             </InputGroup>
           </Box>
