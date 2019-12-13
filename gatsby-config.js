@@ -10,7 +10,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/static`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -33,7 +33,7 @@ module.exports = {
         background_color: `#FFF`,
         theme_color: `#9F00FF`,
         display: `minimal-ui`,
-        icon: `src/images/kennaFavicon.png`,
+        icon: `src/static/kennaFavicon.png`,
       },
     },
     {

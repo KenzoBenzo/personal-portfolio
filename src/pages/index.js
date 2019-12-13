@@ -18,6 +18,10 @@ import illustration from "../static/Illustration.png"
 
 import ValueSection from "../components/organisms/ValueHorizontal"
 
+import Testimonial from "../components/molecules/TestimonialCard"
+import zach from "../static/zach.jpeg"
+import matija from "../static/matija.jpeg"
+
 const Homepage = () => {
   const { colorMode } = useColorMode()
   return (
@@ -60,6 +64,30 @@ const Homepage = () => {
       <ValueSection {...features} />
 
       {/* Testimonials Section */}
+      <Box maxW="1000px" mx="auto" py={16}>
+        <Heading
+          as="h2"
+          mb={8}
+          lineHeight="shorter"
+          fontWeight="900"
+          color={`mode.${colorMode}.heading`}
+          textAlign="center"
+        >
+          What people have to say about Kenna
+        </Heading>
+        <Stack spacing={8}>
+          <Testimonial
+            review="Makenna is an innate design-thinker, perfectly suited for fabricating the tools and content needed to operate successful marketing campaigns. Makenna is well-informed of trends in her field and understands the importance of experience from a user's perspective. Her iterative process is a great fit at technology companies willing to push themselves beyond the traditional and into the transformational. I've witnessed Makenna manage multiple projects simultaneously, meeting deadlines that were beyond reasonable and doing so while providing quality work that was effectively communicated to a team around the world, even from her remote position. I'd be lucky to have the chance to work with Makenna again in the future; whoever gets the chance in the meantime will be better off for having it."
+            reviewer="Zachary Snader"
+            avatar={zach}
+          />
+          <Testimonial
+            review="Makenna is very hard-working and enthusiastic, always full of ideas and fresh approaches. She is a fast learner and is very eager to progress and improve. I believe she has a very successful career ahead of her and wish her all the best in her future endeavours."
+            reviewer="Matija Kovač"
+            avatar={matija}
+          />
+        </Stack>
+      </Box>
 
       {/* Sales funnel capture, download CV Section */}
       <Flex py={16}>

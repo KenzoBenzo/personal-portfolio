@@ -5,7 +5,6 @@ import ValueCard from "../molecules/ValueCard"
 
 const ValueSection = ({ ...features }) => {
   const { colorMode } = useColorMode()
-  console.log(features)
   return (
     <Box maxW="1000px" mx="auto" py={16}>
       <Heading
