@@ -50,6 +50,7 @@ const HeroComponent = ({ image, title, flare, subtitle, ctaText }) => {
                 variant="solid"
                 fontWeight="600"
                 letterSpacing="tight"
+                size="lg"
               >
                 {ctaText}
               </Button>

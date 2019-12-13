@@ -5,6 +5,7 @@ import ValueCard from "../molecules/ValueCard"
 
 const ValueSection = ({ ...features }) => {
   const { colorMode } = useColorMode()
+  console.log(features)
   return (
     <Box maxW="1000px" mx="auto" py={16}>
       <Heading
@@ -33,14 +34,6 @@ const ValueSection = ({ ...features }) => {
           title={features[2].title}
           description={features[2].description}
         />
-        {/* {features.map((feature, i) => (
-          <FeatureCard
-            key={i}
-            icon={feature.icon}
-            title={feature.title}
-            description={feature.description}
-          />
-        ))} */}
       </Stack>
     </Box>
   )

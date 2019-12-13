@@ -40,7 +40,7 @@ export default () => {
       render={data => (
         <Box as="footer" bg={`mode.${colorMode}.cardBG`} py={10}>
           <Box maxW="1000px" mx="auto">
-            <Flex wrap="wrap" justify="space-around">
+            <Flex wrap="wrap" justify="space-between">
               <Stack textAlign="center" mx={16} my={0}>
                 <Text fontWeight="900" color={`mode.${colorMode}.text`}>
                   Social
