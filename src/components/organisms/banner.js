@@ -14,7 +14,7 @@ const Banner = () => {
   return (
     <Stack
       backgroundColor={`mode.${colorMode}.cardBG`}
-      d="flex"
+      display={["none", "none", "flex"]}
       isInline
       py={2}
       px={12}

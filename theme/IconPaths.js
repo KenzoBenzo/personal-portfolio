@@ -311,6 +311,18 @@ const iconPaths = {
     ),
     viewBox: "0 0 64 64",
   },
+  hamburger: {
+    path: (
+      <path
+        d="M1 1H17M1 13H17H1ZM1 7H17H1Z"
+        stroke="currentColor"
+        strokeWidth="2px"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    ),
+    viewBox: "0 0 18 14",
+  },
 }
 
 export default iconPaths
