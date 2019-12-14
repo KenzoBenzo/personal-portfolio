@@ -16,15 +16,32 @@ const HeroComponent = ({ image, title, flare, subtitle, ctaText }) => {
   const { colorMode } = useColorMode()
   return (
     <Flex
-      isInline
       mx="auto"
       maxW="1000px"
       justifyContent="space-between"
       alignItems="center"
       py={16}
+      px={8}
+      display={["block", "block", "flex"]}
     >
-      <Image src={image} alt="Illustration" w={400} mr={16} />
-      <Box>
+      <Image
+        src={image}
+        alt="Illustration"
+        width={[
+          "100%", // base
+          "100%", // 480px upwards
+          "50%", // 480px upwards
+        ]}
+        mr={[0, 0, 16]}
+        mb={[16, 16, 0]}
+      />
+      <Box
+        width={[
+          "100%", // base
+          "100%", // 480px upwards
+          "50%", // 768px upwards
+        ]}
+      >
         <Heading
           mb={4}
           as="h1"
