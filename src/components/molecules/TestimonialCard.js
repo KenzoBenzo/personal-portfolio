@@ -10,7 +10,7 @@ import {
   Flex,
 } from "@chakra-ui/core"
 
-const TestimonialCard = ({ review, reviewer, avatar }) => {
+const TestimonialCard = ({ review, reviewer, avatar, ...props }) => {
   const { colorMode } = useColorMode()
   const [show, setShow] = useState(false)
 
@@ -19,11 +19,13 @@ const TestimonialCard = ({ review, reviewer, avatar }) => {
     <Box
       backgroundColor={colorMode === "light" ? "gray.50" : "gray.800"}
       p={6}
-      m={4}
       rounded="lg"
+      {...props}
     >
       <Collapse startingHeight={64} isOpen={show}>
-        <Text lineHeight="tall">{review}</Text>
+        <Text lineHeight="tall" fontSize="md">
+          {review}
+        </Text>
       </Collapse>
       <Stack isInline alignItems="center" justifyContent="space-between" mt={4}>
         <Flex alignItems="center">

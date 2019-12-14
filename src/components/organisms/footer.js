@@ -40,10 +40,10 @@ export default () => {
         }
       `}
       render={data => (
-        <Box as="footer" bg={`mode.${colorMode}.cardBG`} py={10}>
+        <Box as="footer" bg={`mode.${colorMode}.cardBG`} py={10} px={8}>
           <Box maxW="1000px" mx="auto">
-            <Flex wrap="wrap" justify="space-between">
-              <Stack textAlign="center" mx={16} my={0}>
+            <Flex wrap="wrap" justify="center">
+              <Stack textAlign="center" my={4} w={["100%", "50%", "33%"]}>
                 <Text fontWeight="900" color={`mode.${colorMode}.text`}>
                   Social
                 </Text>
@@ -64,7 +64,7 @@ export default () => {
                   </Link>
                 ))}
               </Stack>
-              <Stack textAlign="center" mx={16} my={0}>
+              <Stack textAlign="center" my={4} w={["100%", "50%", "33%"]}>
                 <Text fontWeight="900" color={`mode.${colorMode}.text`}>
                   Contact
                 </Text>
@@ -85,7 +85,7 @@ export default () => {
                   </Link>
                 ))}
               </Stack>
-              <Stack textAlign="center" mx={16} my={0}>
+              <Stack textAlign="center" my={4} w={["100%", "50%", "33%"]}>
                 <Text fontWeight="900" color={`mode.${colorMode}.text`}>
                   Work
                 </Text>
@@ -112,7 +112,7 @@ export default () => {
               <GatsbyLink to="/">
                 <Icon name="Logo" color="gray.500" size={10} w={24} />
               </GatsbyLink>
-              <Stack isInline>
+              <Stack isInline d={["none", "flex"]}>
                 <IconButton icon="twitter" isRound color="gray.500" />
                 <IconButton icon="linkedin" isRound color="gray.500" />
                 <IconButton icon="github" isRound color="gray.500" />
