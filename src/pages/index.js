@@ -42,7 +42,7 @@ const Homepage = () => {
       />
 
       {/* Social proof section */}
-      <Box maxW="1000px" mx="auto" py={16}>
+      <Box maxW="1000px" mx="auto" py={16} px={8}>
         <Heading
           as="h4"
           fontSize="normal"
