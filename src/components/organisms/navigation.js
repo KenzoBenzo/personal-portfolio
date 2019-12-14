@@ -23,7 +23,7 @@ const Navigation = () => {
   return (
     <Flex
       py={4}
-      px={12}
+      px={[8, 8, 8, 12]}
       isInline
       justifyContent="space-between"
       background={`mode${colorMode}.background`}

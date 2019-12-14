@@ -117,8 +117,14 @@ const Homepage = () => {
         >
           Things Kenna can do well
         </Heading>
-        <Flex wrap="wrap">
-          <Image src={kenna} height="300px" rounded="lg" mr={[0, 16]} />
+        <Flex wrap="wrap" justify="center">
+          <Image
+            src={kenna}
+            height="300px"
+            rounded="lg"
+            mr={[0, 0, 8, 16]}
+            mb={[16, 16, 16, 0]}
+          />
           <Stack spacing={6}>
             <Skill
               icon="abstract1"
@@ -140,7 +146,7 @@ const Homepage = () => {
       </Box>
 
       {/* Sales funnel capture, download CV Section */}
-      <Flex py={16}>
+      <Flex py={16} px={8}>
         <Box
           maxW="1000px"
           mx="auto"
@@ -148,11 +154,15 @@ const Homepage = () => {
           rounded="lg"
           backgroundColor={colorMode === "light" ? "gray.900" : "gray.100"}
         >
-          <Stack isInline d="flex" alignItems="center" spacing={16}>
+          <Flex wrap="wrap" align="center" justify="center">
             <Heading
               color={colorMode === "light" ? "gray.100" : "gray.900"}
               fontWeight={900}
               letterSpacing="wide"
+              w={["100%", "100%", "75%"]}
+              mr={[0, 0, 0, 4]}
+              mb={[6, 6, 6, 0]}
+              textAlign={["center", "center", "center", "left"]}
             >
               Want to know more about Kenna before chatting?
             </Heading>
@@ -167,7 +177,7 @@ const Homepage = () => {
                 </Button>
               </Link>
             </LightMode>
-          </Stack>
+          </Flex>
         </Box>
       </Flex>
     </Layout>
