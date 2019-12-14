@@ -6,14 +6,12 @@ import {
   Icon,
   Flex,
   useColorMode,
-  Box,
   useDisclosure,
   Drawer,
   DrawerContent,
   DrawerHeader,
   DrawerBody,
   DrawerCloseButton,
-  MenuItem,
 } from "@chakra-ui/core"
 import { Link } from "gatsby"
 

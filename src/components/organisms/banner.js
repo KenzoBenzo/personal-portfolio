@@ -40,7 +40,6 @@ const Banner = () => {
         isExternal
       >
         <Button
-          as="a"
           fontSize="sm"
           size="sm"
           m={0}
