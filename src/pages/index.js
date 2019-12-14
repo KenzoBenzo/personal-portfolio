@@ -53,16 +53,27 @@ const Homepage = () => {
         >
           Companies that kenna has worked with
         </Heading>
-        <Stack isInline spacing={8} color={`mode.${colorMode}.icon`}>
-          <Icon name="clickup" size={32} color={`mode.${colorMode}.icon`} />
-          <Icon name="graphcms" size={32} color={`mode.${colorMode}.icon`} />
-          <Icon name="taia" size={32} color={`mode.${colorMode}.icon`} />
+        <Flex wrap="wrap" justify="center">
+          <Icon
+            name="clickup"
+            size={32}
+            mx={4}
+            color={`mode.${colorMode}.icon`}
+          />
+          <Icon
+            name="graphcms"
+            size={32}
+            mx={4}
+            color={`mode.${colorMode}.icon`}
+          />
+          <Icon name="taia" size={32} mx={4} color={`mode.${colorMode}.icon`} />
           <Icon
             name="altitude-activities"
             size={32}
+            mx={4}
             color={`mode.${colorMode}.icon`}
           />
-        </Stack>
+        </Flex>
       </Box>
 
       {/* Value Props Section */}
