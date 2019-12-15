@@ -9,6 +9,14 @@ import {
   Stack,
   LightMode,
   Link,
+  Badge,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverArrow,
+  PopoverCloseButton,
+  PopoverHeader,
+  PopoverBody,
 } from "@chakra-ui/core"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -54,6 +62,25 @@ const HeroComponent = ({ title, flare, subtitle, ctaText }) => {
           "50%", // 768px upwards
         ]}
       >
+        <Popover>
+          <PopoverTrigger>
+            <Badge variantColor="red" mb={4}>
+              What is this? click me
+            </Badge>
+          </PopoverTrigger>
+          <PopoverContent
+            zIndex={4}
+            backgroundColor={`mode.${colorMode}.cardBG`}
+          >
+            <PopoverArrow />
+            <PopoverCloseButton />
+            <PopoverHeader>Hey, I'm Kenna.</PopoverHeader>
+            <PopoverBody>
+              I love building websites for SaaS products and wanted to show off
+              a bit of what I do. This page uses me as the product!
+            </PopoverBody>
+          </PopoverContent>
+        </Popover>
         <Heading
           mb={4}
           as="h1"
@@ -64,7 +91,7 @@ const HeroComponent = ({ title, flare, subtitle, ctaText }) => {
         >
           {title} {flare ? <Text as="i">{flare}</Text> : null}
         </Heading>
-        <Text color={`mode.${colorMode}.text`} lineHeight="tall" mb={6}>
+        <Text color={`mode.${colorMode}.text`} lineHeight="tall" mb={8}>
           {subtitle}
         </Text>
         <Stack isInline>
