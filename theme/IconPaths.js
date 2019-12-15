@@ -79,7 +79,7 @@ const iconPaths = {
       />
     ),
     // If the icon's viewBox is `0 0 24 24`, you can ignore `viewBox`
-    viewBox: "0 0 20 20",
+    viewBox: "0 0 18 16",
   },
   linkedin: {
     path: (
@@ -88,7 +88,7 @@ const iconPaths = {
         fill="currentColor"
       />
     ),
-    viewBox: "0 0 16 16",
+    viewBox: "0 0 18 18",
   },
   twitter: {
     path: (

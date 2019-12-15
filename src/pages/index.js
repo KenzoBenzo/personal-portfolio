@@ -28,7 +28,6 @@ import kenna from "../static/KennaSmutz.jpg"
 
 const Homepage = () => {
   const { colorMode } = useColorMode()
-
   return (
     <Layout>
       <SEO title="Home" />
@@ -114,9 +113,9 @@ const Homepage = () => {
           color={`mode.${colorMode}.heading`}
           textAlign="center"
         >
-          Things Kenna can do well
+          Things Kenna does well
         </Heading>
-        <Flex wrap="wrap" justify="center">
+        <Flex wrap="wrap" justify="center" align="center">
           <Image
             src={kenna}
             height="300px"

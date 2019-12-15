@@ -47,17 +47,6 @@ const HeroComponent = ({ title, flare, subtitle, ctaText }) => {
       >
         <Img fluid={data.file.childImageSharp.fluid} alt="Illustration" />
       </Box>
-      {/* <Image
-        src={image}
-        alt="Illustration"
-        width={[
-          "100%", // base
-          "100%", // 480px upwards
-          "50%", // 480px upwards
-        ]}
-        mr={[0, 0, 16]}
-        mb={[16, 16, 0]}
-      /> */}
       <Box
         width={[
           "100%", // base
