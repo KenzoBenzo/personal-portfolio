@@ -125,17 +125,17 @@ const Homepage = () => {
           />
           <Stack spacing={6}>
             <Skill
-              icon="abstract1"
+              icon="abstract5"
               title="Web Design"
               description="description goes here. this is a placeholder"
             />
             <Skill
-              icon="abstract2"
+              icon="abstract4"
               title="Frontend Development"
               description="description goes here. this is a placeholder"
             />
             <Skill
-              icon="abstract3"
+              icon="abstract6"
               title="UX Focused"
               description="description goes here. this is a placeholder"
             />
