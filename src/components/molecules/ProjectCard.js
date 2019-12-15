@@ -39,12 +39,12 @@ const ProjectCard = ({ rawTags, title, summary, link }) => {
             {title}
           </Heading>
           {tags ? (
-            <Stack isInline mt={[4, 4, 0]}>
+            <Stack isInline mb={4}>
               {tags}
             </Stack>
           ) : null}
         </Flex>
-        <Text mb={4} color={`mode.${colorMode}.text`}>
+        <Text mb={6} color={`mode.${colorMode}.text`}>
           {summary}
         </Text>
         <Button rightIcon="arrow-forward" fontWeight="600" variant="ghost">
