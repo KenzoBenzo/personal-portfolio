@@ -2,7 +2,6 @@ import React from "react"
 import {
   useColorMode,
   Flex,
-  Image,
   Box,
   Heading,
   Text,
@@ -11,9 +10,22 @@ import {
   LightMode,
   Link,
 } from "@chakra-ui/core"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
-const HeroComponent = ({ image, title, flare, subtitle, ctaText }) => {
+const HeroComponent = ({ title, flare, subtitle, ctaText }) => {
   const { colorMode } = useColorMode()
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { regex: "/Illustration.png/" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
   return (
     <Flex
       mx="auto"
@@ -24,7 +36,18 @@ const HeroComponent = ({ image, title, flare, subtitle, ctaText }) => {
       px={8}
       display={["block", "block", "flex"]}
     >
-      <Image
+      <Box
+        width={[
+          "100%", // base
+          "100%", // 480px upwards
+          "50%", // 480px upwards
+        ]}
+        mr={[0, 0, 16]}
+        mb={[16, 16, 0]}
+      >
+        <Img fluid={data.file.childImageSharp.fluid} alt="Illustration" />
+      </Box>
+      {/* <Image
         src={image}
         alt="Illustration"
         width={[
@@ -34,7 +57,7 @@ const HeroComponent = ({ image, title, flare, subtitle, ctaText }) => {
         ]}
         mr={[0, 0, 16]}
         mb={[16, 16, 0]}
-      />
+      /> */}
       <Box
         width={[
           "100%", // base

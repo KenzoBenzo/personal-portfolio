@@ -15,7 +15,6 @@ import {
 } from "@chakra-ui/core"
 
 import Hero from "../components/organisms/hero"
-import illustration from "../static/Illustration.png"
 
 import ValueSection from "../components/organisms/ValueHorizontal"
 
@@ -29,12 +28,12 @@ import kenna from "../static/KennaSmutz.jpg"
 
 const Homepage = () => {
   const { colorMode } = useColorMode()
+
   return (
     <Layout>
       <SEO title="Home" />
 
       <Hero
-        image={illustration}
         title="Design + Code for Growth"
         subtitle="A high-performer that makes website creation seamless. Kenna is an energetic 22 year old that excels in execution, design, and frontend development."
         ctaText="Schedule a Call"
