@@ -2,16 +2,12 @@
 @supports (font-variation-settings: normal) {
   html {
     font-family: "Inter var", sans-serif;
+    background: #fff;
   }
-}
-
-html {
-  color: #03005c;
 }
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
-  background: #f6faff;
 }
 
 h1,

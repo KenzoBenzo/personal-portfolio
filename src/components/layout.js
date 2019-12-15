@@ -1,29 +1,22 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
-import PropTypes from "prop-types"
-import Footer from "./footer"
+import Footer from "./organisms/footer"
+import Banner from "./organisms/banner"
+import Navigation from "./organisms/navigation"
 import "./layout.css"
-import { ThemeProvider } from "@chakra-ui/core"
+import { Stack, useColorMode } from "@chakra-ui/core"
 import customTheme from "../../theme/theme"
 
-const Layout = ({ children }) => {
+export default function Layout({ children }) {
+  const { colorMode } = useColorMode()
+  const brandColorTheme = customTheme.colors.mode[colorMode]
   return (
-    <ThemeProvider theme={customTheme}>
-      {/* header goes here */}
-      <main>{children}</main>
+    <>
+      <Stack minH="90vh" backgroundColor={brandColorTheme.background}>
+        <Banner />
+        <Navigation />
+        {children}
+      </Stack>
       <Footer />
-    </ThemeProvider>
+    </>
   )
 }
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
-export default Layout

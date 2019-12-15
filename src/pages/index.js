@@ -1,130 +1,206 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import makenna from "../images/KennaSmutz.jpg"
-import ProjectCard from "../components/ProjectCard"
-import DribbbleCard from "../components/DribbbleCard"
-import { StaticQuery, graphql } from "gatsby"
-import { Image, Flex, Button, Link, Icon, Stack, Text } from "@chakra-ui/core"
+import {
+  Heading,
+  Box,
+  Stack,
+  useColorMode,
+  Icon,
+  Button,
+  LightMode,
+  Link,
+  Flex,
+  Image,
+} from "@chakra-ui/core"
 
-export default () => (
-  <StaticQuery
-    query={graphql`
-      {
-        gcms {
-          portfolioCards(where: { status: PUBLISHED }) {
-            title
-            slug
-            summary
-            type
-          }
-        }
-        allDribleProjects(limit: 12) {
-          edges {
-            node {
-              cover
-              url
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
-      <Layout>
-        <SEO title="Home" />
-        <div
-          style={{
-            padding: "64px 32px",
-          }}
+import Hero from "../components/organisms/hero"
+
+import ValueSection from "../components/organisms/ValueHorizontal"
+
+import Testimonial from "../components/molecules/TestimonialCard"
+import zach from "../static/zach.jpeg"
+import matija from "../static/matija.jpeg"
+
+import Skill from "../components/molecules/SkillCard"
+
+import kenna from "../static/KennaSmutz.jpg"
+
+const Homepage = () => {
+  const { colorMode } = useColorMode()
+  return (
+    <Layout>
+      <SEO title="Home" />
+
+      <Hero
+        title="Design + Code for Growth"
+        subtitle="A high-performer that makes website creation seamless. Kenna is an energetic 22 year old that excels in execution of design, and frontend development."
+        ctaText="Schedule a Call"
+      />
+
+      {/* Social proof section */}
+      <Box maxW="1000px" mx="auto" py={16} px={8}>
+        <Heading
+          as="h4"
+          fontSize="normal"
+          fontWeight="900"
+          letterSpacing="wide"
+          color={`mode.${colorMode}.icon`}
+          textAlign="center"
         >
-          <Flex>
-            <Image
-              rounded="full"
-              size="150px"
-              src={makenna}
-              alt="Makenna Smutz Profile Image"
-              border="1px solid #BCCCDC"
-              mx="auto"
-            />
-          </Flex>
-          <Text fontSize="5xl" textAlign="center" fontWeight="medium" mb={4}>
-            Hey, I’m Makenna!
-          </Text>
-          <Text
-            fontSize="4xl"
-            textAlign="center"
-            fontWeight="normal"
-            maxW={750}
-            mx="auto"
-          >
-            I design and code. I am a generalist that specializes in{" "}
-            <span style={{ background: "#F4CBC3", padding: "0 2px" }}>
-              DOING
-            </span>
-            . In the future, I'd like to work with design systems more.
-          </Text>
-          <Flex justifyContent="center" m={8}>
-            <Button
-              as="a"
-              target="_blank"
-              href="mailto:makennasmutz@gmail.com?subject=I want to work together!"
-              variantColor="primary"
-              size="lg"
-            >
-              Get in Touch
-            </Button>
-          </Flex>
-        </div>
+          Companies that have worked with Kenna
+        </Heading>
+        <Flex wrap="wrap" justify="center">
+          <Icon
+            name="clickup"
+            size={32}
+            mx={4}
+            color={`mode.${colorMode}.icon`}
+          />
+          <Icon
+            name="graphcms"
+            size={32}
+            mx={4}
+            color={`mode.${colorMode}.icon`}
+          />
+          <Icon name="taia" size={32} mx={4} color={`mode.${colorMode}.icon`} />
+          <Icon
+            name="altitude-activities"
+            size={32}
+            mx={4}
+            color={`mode.${colorMode}.icon`}
+          />
+        </Flex>
+      </Box>
 
-        <div style={{ padding: "64px 32px" }}>
-          <Text fontSize="5xl" textAlign="center" fontWeight="medium" mb={0}>
-            My Dribbble Shots
-          </Text>
-          <Flex
-            align="center"
-            justify="center"
-            wrap="wrap"
-            maxW={1100}
-            mx="auto"
-            mt={0}
+      {/* Value Props Section */}
+      <ValueSection {...features} />
+
+      {/* Testimonials Section */}
+      <Box maxW="1000px" mx="auto" py={16} px={8}>
+        <Heading
+          as="h2"
+          mb={8}
+          lineHeight="shorter"
+          fontWeight="900"
+          color={`mode.${colorMode}.heading`}
+          textAlign="center"
+        >
+          What people have to say about Kenna
+        </Heading>
+        <Stack spacing={8}>
+          <Testimonial
+            review="Makenna is an innate design-thinker, perfectly suited for fabricating the tools and content needed to operate successful marketing campaigns. Makenna is well-informed of trends in her field and understands the importance of experience from a user's perspective. Her iterative process is a great fit at technology companies willing to push themselves beyond the traditional and into the transformational. I've witnessed Makenna manage multiple projects simultaneously, meeting deadlines that were beyond reasonable and doing so while providing quality work that was effectively communicated to a team around the world, even from her remote position. I'd be lucky to have the chance to work with Makenna again in the future; whoever gets the chance in the meantime will be better off for having it."
+            reviewer="Zachary Snader"
+            avatar={zach}
             mb={4}
-          >
-            {data.allDribleProjects.edges.map((card, index) => (
-              <DribbbleCard
-                key={index}
-                cover={card.node.cover}
-                url={card.node.url}
-              />
-            ))}
-            <Link
-              target="_blank"
-              fontSize="lg"
-              href="https://dribbble.com/KennaSmutz"
-              m="32px 0 0 0"
-              isExternal
-            >
-              See more <Icon name="external-link" mx="2px" />
-            </Link>
-          </Flex>
-        </div>
+          />
+          <Testimonial
+            review="Makenna is very hard-working and enthusiastic, always full of ideas and fresh approaches. She is a fast learner and is very eager to progress and improve. I believe she has a very successful career ahead of her and wish her all the best in her future endeavours."
+            reviewer="Matija Kovač"
+            avatar={matija}
+          />
+        </Stack>
+      </Box>
 
-        <div style={{ padding: "64px 32px" }}>
-          <Text fontSize="5xl" textAlign="center" fontWeight="medium" mb={0}>
-            Projects in My Portfolio
-          </Text>
-          <Stack maxW={1000} mx="auto" my={4}>
-            {data.gcms.portfolioCards.map((card, index) => (
-              <ProjectCard
-                key={index}
-                rawTags={card.type}
-                title={card.title}
-                summary={card.summary}
-                link={`/projects/${card.slug}/`}
-              />
-            ))}
+      {/* Skill Set section */}
+      <Box maxW="1000px" mx="auto" py={16} px={8}>
+        <Heading
+          as="h2"
+          mb={8}
+          lineHeight="shorter"
+          fontWeight="900"
+          color={`mode.${colorMode}.heading`}
+          textAlign="center"
+        >
+          Things Kenna excels at
+        </Heading>
+        <Flex wrap="wrap" justify="center" align="center">
+          <Image
+            src={kenna}
+            height="300px"
+            rounded="lg"
+            mr={[0, 0, 8, 16]}
+            mb={[16, 16, 16, 0]}
+          />
+          <Stack spacing={6} w={["100%", "100%", "50%"]}>
+            <Skill
+              icon="abstract5"
+              title="Web Design"
+              description="4 years of experience designing and is profficient in several tools such as Figma, Framer, UXpin, and Sketch. Kenna works on everything from stickers to application design."
+            />
+            <Skill
+              icon="abstract4"
+              title="Frontend Development"
+              description="3 years of experience as a self-taught frontend developer. Kenna works daily with React and GraphQL but has worked briefly in Vue and Vanilla JavaScript as well."
+            />
+            <Skill
+              icon="abstract6"
+              title="UX Focused"
+              description="Design and development without the user's experience at the core, is just drawing boxes. Kenna works with user testing and by-reflex, designs under ux principles and best practices."
+            />
           </Stack>
-        </div>
-      </Layout>
-    )}
-  />
-)
+        </Flex>
+      </Box>
+
+      {/* Sales funnel capture, download CV Section */}
+      <Flex py={16} px={8}>
+        <Box
+          maxW="1000px"
+          mx="auto"
+          p={6}
+          rounded="lg"
+          backgroundColor={colorMode === "light" ? "gray.900" : "gray.100"}
+        >
+          <Flex wrap="wrap" align="center" justify="center">
+            <Heading
+              color={colorMode === "light" ? "gray.100" : "gray.900"}
+              fontWeight={900}
+              letterSpacing="wide"
+              w={["100%", "100%", "75%"]}
+              mr={[0, 0, 0, 4]}
+              mb={[6, 6, 6, 0]}
+              textAlign={["center", "center", "center", "left"]}
+            >
+              Want to know more about Kenna before chatting?
+            </Heading>
+            <LightMode>
+              <Link
+                href="https://drive.google.com/open?id=1e5KjZBdySbf8IhXp8R275ZJI6rnnFhtj"
+                isExternal
+                _hover={{ textDecoration: "none" }}
+              >
+                <Button variantColor="primary" fontWeight={600} size="lg">
+                  Download her CV
+                </Button>
+              </Link>
+            </LightMode>
+          </Flex>
+        </Box>
+      </Flex>
+    </Layout>
+  )
+}
+
+const features = [
+  {
+    icon: "abstract1",
+    title: "Web design",
+    description:
+      "In research, ideation, and execution - Kenna follows the latest trends and optimizes for growth.",
+  },
+  {
+    icon: "abstract2",
+    title: "Frontend code",
+    description:
+      "Frontend implementation or developer handoff, Kenna has got it covered.",
+  },
+  {
+    icon: "abstract3",
+    title: "Cutsomer centric",
+    description:
+      "The silver lining of Kenna's workflow, is the customer and their needs - focused approach.",
+  },
+]
+
+export default Homepage

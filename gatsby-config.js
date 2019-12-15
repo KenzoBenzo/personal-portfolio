@@ -10,7 +10,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/static`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -27,13 +27,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `kennas-personal-portfolio`,
+        short_name: `Makenna Smutz`,
         start_url: `/`,
-        background_color: `#F6FAFF`,
-        theme_color: `#03005C`,
+        background_color: `#FFF`,
+        theme_color: `#9F00FF`,
         display: `minimal-ui`,
-        icon: `src/images/kennaFavicon.png`,
+        icon: `src/static/kennaFavicon.png`,
       },
     },
     {
