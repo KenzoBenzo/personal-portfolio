@@ -34,7 +34,7 @@ const Page = () => {
   `)
   return (
     <Layout>
-      <Stack isInline mx="auto" spacing={4}>
+      <Stack isInline mx="auto" spacing={4} pt={16} px={8}>
         <Heading
           as="h2"
           fontSize="4xl"
@@ -53,7 +53,7 @@ const Page = () => {
           )
         })}
       </Stack>
-      <Stack maxW={1000} mx="auto" py={16} px={8}>
+      <Stack maxW={1000} mx="auto" mt={8} pb={16} px={8}>
         <ReactMarkdown
           source={data.gcms.portfolioCard.body.markdown}
           escapeHtml={false}

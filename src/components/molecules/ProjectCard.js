@@ -11,7 +11,7 @@ import {
   Flex,
 } from "@chakra-ui/core"
 
-const ProjectCard = ({ rawTags, title, summary, link }) => {
+const ProjectCard = ({ rawTags, title, summary, link, ...props }) => {
   let tags = rawTags.map(i => {
     return (
       <Tag variantColor="blue" size="md" fontWeight={600}>
@@ -25,6 +25,7 @@ const ProjectCard = ({ rawTags, title, summary, link }) => {
       to={link}
       alt="A project by makenna"
       style={{ textDecoration: "none" }}
+      {...props}
     >
       <Box bg={`mode.${colorMode}.cardBG`} p={6} borderRadius="lg" mb={8}>
         <Flex wrap="wrap" justifyContent="space-between">

@@ -35,9 +35,8 @@ const Homepage = () => {
 
       <Hero
         image={illustration}
-        title="Design.Code. "
-        flare="Kenna."
-        subtitle="A do-er that makes website creation seamless. Kenna is an energetic 22 year old that excels in execution, design, and frontend development."
+        title="Design + Code for Growth"
+        subtitle="A high-performer that makes website creation seamless. Kenna is an energetic 22 year old that excels in execution, design, and frontend development."
         ctaText="Schedule a Call"
       />
 
@@ -51,7 +50,7 @@ const Homepage = () => {
           color={`mode.${colorMode}.icon`}
           textAlign="center"
         >
-          Companies that kenna has worked with
+          Companies that have worked with Kenna
         </Heading>
         <Flex wrap="wrap" justify="center">
           <Icon
@@ -188,21 +187,21 @@ const Homepage = () => {
 const features = [
   {
     icon: "abstract1",
-    title: "Tester #1 here",
+    title: "Web design",
     description:
-      "This is the grandest feature ever. Please for the love of god hire makenna.",
+      "In research, ideation, and execution - Kenna follows the latest trends and optimizes for growth.",
   },
   {
     icon: "abstract2",
-    title: "Tester #2 here",
+    title: "Frontend code",
     description:
-      "This is the grandest feature ever. Please for the love of god hire makenna.",
+      "Frontend implementation or developer handoff, Kenna has got it covered.",
   },
   {
     icon: "abstract3",
-    title: "Tester #3 here",
+    title: "Cutsomer centric",
     description:
-      "This is the grandest feature ever. Please for the love of god hire makenna.",
+      "The silver lining of Kenna's workflow, is her customer and their needs - focused approach.",
   },
 ]
 
