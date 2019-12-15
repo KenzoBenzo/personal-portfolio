@@ -34,7 +34,7 @@ const Homepage = () => {
 
       <Hero
         title="Design + Code for Growth"
-        subtitle="A high-performer that makes website creation seamless. Kenna is an energetic 22 year old that excels in execution, design, and frontend development."
+        subtitle="A high-performer that makes website creation seamless. Kenna is an energetic 22 year old that excels in execution of design, and frontend development."
         ctaText="Schedule a Call"
       />
 
@@ -123,21 +123,21 @@ const Homepage = () => {
             mr={[0, 0, 8, 16]}
             mb={[16, 16, 16, 0]}
           />
-          <Stack spacing={6}>
+          <Stack spacing={6} w={["100%", "100%", "50%"]}>
             <Skill
               icon="abstract5"
               title="Web Design"
-              description="description goes here. this is a placeholder"
+              description="Kenna has 4 years of experience designing and is profficient in several tools such as Figma and Framer. Kenna works on everything from stickers to application design."
             />
             <Skill
               icon="abstract4"
               title="Frontend Development"
-              description="description goes here. this is a placeholder"
+              description="Kenna has 3 years of experience as a self-taught frontend developer. Kenna works daily with React and GraphQL but has worked briefly in Vue and Vanilla JavaScript as well."
             />
             <Skill
               icon="abstract6"
               title="UX Focused"
-              description="description goes here. this is a placeholder"
+              description="Kenna understands that design and development with out the user's experience at the core, is just drawing boxes. Kenna works with user testing and by-reflex, designs under ux principles and best practices."
             />
           </Stack>
         </Flex>
@@ -199,7 +199,7 @@ const features = [
     icon: "abstract3",
     title: "Cutsomer centric",
     description:
-      "The silver lining of Kenna's workflow, is her customer and their needs - focused approach.",
+      "The silver lining of Kenna's workflow, is the customer and their needs - focused approach.",
   },
 ]
 

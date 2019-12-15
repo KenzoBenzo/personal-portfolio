@@ -1,15 +1,16 @@
 import React from "react"
-import { Box, Icon, Heading, Text, useColorMode, Stack } from "@chakra-ui/core"
+import { Box, Icon, Heading, Text, useColorMode, Flex } from "@chakra-ui/core"
 
 const SkillCard = ({ icon, title, description, ...props }) => {
   const { colorMode } = useColorMode()
   return (
-    <Stack isInline spacing={4} alignItems="center" {...props}>
+    <Flex alignItems="start" justifyContent="start" {...props}>
       <Box
         rounded="full"
         backgroundColor={`mode.${colorMode}.cardBG`}
         p={4}
         size={20}
+        mr={4}
       >
         <Icon name={icon} size={12} mb={6} />
       </Box>
@@ -27,7 +28,7 @@ const SkillCard = ({ icon, title, description, ...props }) => {
           {description}
         </Text>
       </Box>
-    </Stack>
+    </Flex>
   )
 }
 

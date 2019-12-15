@@ -65,7 +65,7 @@ const HeroComponent = ({ title, flare, subtitle, ctaText }) => {
         <Popover>
           <PopoverTrigger>
             <Badge variantColor="red" mb={4}>
-              What is this? click me
+              story behind this site? click me
             </Badge>
           </PopoverTrigger>
           <PopoverContent
