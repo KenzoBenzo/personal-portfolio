@@ -8,6 +8,7 @@ import {
   useColorMode,
   Heading,
   Button,
+  Flex,
 } from "@chakra-ui/core"
 
 const ProjectCard = ({ rawTags, title, summary, link }) => {
@@ -26,21 +27,26 @@ const ProjectCard = ({ rawTags, title, summary, link }) => {
       style={{ textDecoration: "none" }}
     >
       <Box bg={`mode.${colorMode}.cardBG`} p={6} borderRadius="lg" mb={8}>
-        {tags ? (
-          <Stack isInline justifyContent="flex-end">
-            {tags}
-          </Stack>
-        ) : null}
-        <Heading
-          as="h3"
-          fontSize="3xl"
-          fontWeight="900"
-          letterSpacing="wide"
-          mb={4}
-        >
-          {title}
-        </Heading>
-        <Text mb={6}>{summary}</Text>
+        <Flex wrap="wrap" justifyContent="space-between">
+          <Heading
+            as="h3"
+            fontSize={["2xl", "3xl"]}
+            fontWeight="900"
+            letterSpacing="wide"
+            mb={4}
+            color={`mode.${colorMode}.heading`}
+          >
+            {title}
+          </Heading>
+          {tags ? (
+            <Stack isInline mt={[4, 4, 0]}>
+              {tags}
+            </Stack>
+          ) : null}
+        </Flex>
+        <Text mb={4} color={`mode.${colorMode}.text`}>
+          {summary}
+        </Text>
         <Button rightIcon="arrow-forward" fontWeight="600" variant="ghost">
           Dive Deep with the Details
         </Button>

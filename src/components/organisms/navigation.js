@@ -12,6 +12,7 @@ import {
   DrawerHeader,
   DrawerBody,
   DrawerCloseButton,
+  DrawerFooter,
 } from "@chakra-ui/core"
 import { Link } from "gatsby"
 
@@ -53,7 +54,7 @@ const Navigation = () => {
         onClose={onClose}
         isOpen={isOpen}
         finalFocusRef={btnRef}
-        size="xs"
+        size="sm"
         backgroundColor={`mode.${colorMode}.cardBG`}
       >
         <DrawerContent
@@ -71,10 +72,10 @@ const Navigation = () => {
               />
             </Link>
           </DrawerHeader>
-          <DrawerBody>
-            <Stack>
+          <DrawerBody py={6}>
+            <Stack justify="center" align="center">
               <Link to="/about-me/">
-                <Button variantColor="gray" variant="ghost">
+                <Button variantColor="gray" variant="ghost" mx="auto">
                   About me
                 </Button>
               </Link>
@@ -90,6 +91,14 @@ const Navigation = () => {
               </Link>
             </Stack>
           </DrawerBody>
+          <DrawerFooter d="flex" justifyContent="center">
+            <Stack isInline>
+              <IconButton icon="twitter" isRound color="gray.500" />
+              <IconButton icon="linkedin" isRound color="gray.500" />
+              <IconButton icon="github" isRound color="gray.500" />
+              <IconButton icon="dribbble" isRound color="gray.500" />
+            </Stack>
+          </DrawerFooter>
         </DrawerContent>
       </Drawer>
 

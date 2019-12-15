@@ -27,10 +27,10 @@ const TestimonialCard = ({ review, reviewer, avatar, ...props }) => {
           {review}
         </Text>
       </Collapse>
-      <Stack isInline alignItems="center" justifyContent="space-between" mt={4}>
+      <Flex wrap="wrap" align="center" justify="space-between" mt={4}>
         <Flex alignItems="center">
           <Avatar size="md" name={reviewer} src={avatar} mr={4} />
-          <Text lineHeight="base" fontWeight={900}>
+          <Text lineHeight="base" fontSize="md" fontWeight={900}>
             {reviewer}
           </Text>
         </Flex>
@@ -40,10 +40,11 @@ const TestimonialCard = ({ review, reviewer, avatar, ...props }) => {
           variantColor="gray"
           onClick={handleToggle}
           fontWeight={600}
+          mt={[4, 0]}
         >
           Show {show ? "Less" : "More"}
         </Button>
-      </Stack>
+      </Flex>
     </Box>
   )
 }
