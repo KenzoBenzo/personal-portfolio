@@ -113,7 +113,7 @@ const Homepage = () => {
           color={`mode.${colorMode}.heading`}
           textAlign="center"
         >
-          Things Kenna does well
+          Things Kenna excels at
         </Heading>
         <Flex wrap="wrap" justify="center" align="center">
           <Image
@@ -127,17 +127,17 @@ const Homepage = () => {
             <Skill
               icon="abstract5"
               title="Web Design"
-              description="Kenna has 4 years of experience designing and is profficient in several tools such as Figma and Framer. Kenna works on everything from stickers to application design."
+              description="4 years of experience designing and is profficient in several tools such as Figma, Framer, UXpin, and Sketch. Kenna works on everything from stickers to application design."
             />
             <Skill
               icon="abstract4"
               title="Frontend Development"
-              description="Kenna has 3 years of experience as a self-taught frontend developer. Kenna works daily with React and GraphQL but has worked briefly in Vue and Vanilla JavaScript as well."
+              description="3 years of experience as a self-taught frontend developer. Kenna works daily with React and GraphQL but has worked briefly in Vue and Vanilla JavaScript as well."
             />
             <Skill
               icon="abstract6"
               title="UX Focused"
-              description="Kenna understands that design and development with out the user's experience at the core, is just drawing boxes. Kenna works with user testing and by-reflex, designs under ux principles and best practices."
+              description="Design and development without the user's experience at the core, is just drawing boxes. Kenna works with user testing and by-reflex, designs under ux principles and best practices."
             />
           </Stack>
         </Flex>
