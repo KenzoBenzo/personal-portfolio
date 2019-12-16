@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.local`,
+})
+
 const siteUrl = `https://kenna.xyz`
 
 module.exports = {
@@ -26,6 +30,9 @@ module.exports = {
         fieldName: "gcms",
         url:
           "https://api-euwest.graphcms.com/v1/ck0qlr3qr1fdt01cp5pkp0qg2/master",
+        headers: {
+          Authorization: `Bearer ${process.env.GRAPHCMS_TOKEN}`,
+        },
       },
     },
     {
