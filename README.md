@@ -6,7 +6,6 @@ The tech stack it's built with includes:
 
 - Gatbsy
 - Netlify
-- Styled-Components
 - Chakra UI
 - GraphCMS
 - The Dribbble API
