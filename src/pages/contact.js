@@ -75,7 +75,8 @@ const ContactPage = () => {
             <InputGroup mb={8} size="lg">
               <InputLeftAddon children="https://" />
               <Input
-                rounded="0"
+                roundedRight="md"
+                roundedLeft="0"
                 type="webiste"
                 name="website"
                 placeholder="company-site"

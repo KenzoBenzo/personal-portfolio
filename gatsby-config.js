@@ -1,8 +1,16 @@
+require("dotenv").config({
+  path: `.env.local`,
+})
+
+const siteUrl = `https://kenna.xyz`
+
 module.exports = {
   siteMetadata: {
     title: `Makenna's Portfolio`,
     description: `As a place to currate design and code acomplishments in my career, I've built this portfolio. The stack is Gatsby and GraphCMS. Email me makennasmutz@gmail.com`,
     author: `Makenna Smutz <makennasmutz@gmail.com>`,
+    siteUrl,
+    ogImage: `https://media.graphcms.com/h3X21pTS7mfTghpu5Cow`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -22,6 +30,9 @@ module.exports = {
         fieldName: "gcms",
         url:
           "https://api-euwest.graphcms.com/v1/ck0qlr3qr1fdt01cp5pkp0qg2/master",
+        headers: {
+          Authorization: `Bearer ${process.env.GRAPHCMS_TOKEN}`,
+        },
       },
     },
     {

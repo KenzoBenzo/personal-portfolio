@@ -136,7 +136,7 @@ const Homepage = () => {
             />
             <Skill
               icon="abstract6"
-              title="UX Focused"
+              title="UX Focus"
               description="Design and development without the user's experience at the core, is just drawing boxes. Kenna works with user testing and by-reflex, designs under ux principles and best practices."
             />
           </Stack>
