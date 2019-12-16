@@ -1,8 +1,12 @@
+const siteUrl = `https://kenna.xyz`
+
 module.exports = {
   siteMetadata: {
     title: `Makenna's Portfolio`,
     description: `As a place to currate design and code acomplishments in my career, I've built this portfolio. The stack is Gatsby and GraphCMS. Email me makennasmutz@gmail.com`,
     author: `Makenna Smutz <makennasmutz@gmail.com>`,
+    siteUrl,
+    ogImage: `https://media.graphcms.com/h3X21pTS7mfTghpu5Cow`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
