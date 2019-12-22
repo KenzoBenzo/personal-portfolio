@@ -61,5 +61,14 @@ module.exports = {
         fs_org: `${process.env.FULLSTORY_TOKEN}`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `${process.env.GOOGLE_ANALYTICS_TOKEN}`,
+        head: true,
+        anonymize: true,
+        pageTransitionDelay: 0,
+      },
+    },
   ],
 }
