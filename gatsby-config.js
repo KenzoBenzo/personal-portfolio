@@ -55,5 +55,11 @@ module.exports = {
           "15857a7dff290d186214cbde2043338fadb5ecd69ef5ae99e6417262bc54f966",
       },
     },
+    {
+      resolve: `gatsby-plugin-fullstory`,
+      options: {
+        fs_org: `${process.env.FULLSTORY_TOKEN}`,
+      },
+    },
   ],
 }
