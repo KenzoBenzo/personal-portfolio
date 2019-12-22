@@ -30,7 +30,7 @@ const Homepage = () => {
   const { colorMode } = useColorMode()
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO />
 
       <Hero
         title="Design + Code for Growth"
