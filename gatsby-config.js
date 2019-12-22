@@ -13,6 +13,7 @@ module.exports = {
     ogImage: `https://media.graphcms.com/h3X21pTS7mfTghpu5Cow`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

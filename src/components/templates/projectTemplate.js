@@ -1,37 +1,24 @@
 import React from "react"
 import {
-  Text,
+  Heading,
   Stack,
   Button,
-  List,
-  ListItem,
   useColorMode,
-  Image,
-  Heading,
   Tag,
   LightMode,
+  Text,
+  List,
+  ListItem,
+  Image,
+  Link,
 } from "@chakra-ui/core"
-import Layout from "../../components/layout"
-import { useStaticQuery, graphql } from "gatsby"
-import ReactMarkdown from "react-markdown"
-import { Link } from "gatsby"
 import theme from "../../../theme/theme"
+import Layout from "../layout"
+import ReactMarkdown from "react-markdown"
+import { Link as GatsbyLink } from "gatsby"
 
-const Page = () => {
+const Page = ({ pageContext: { project } }) => {
   const { colorMode } = useColorMode()
-  const data = useStaticQuery(graphql`
-    {
-      gcms {
-        portfolioCard(where: { id: "ck0qma0nxuuwf0b59plo0u04p" }) {
-          title
-          type
-          body {
-            markdown
-          }
-        }
-      }
-    }
-  `)
   return (
     <Layout>
       <Stack isInline mx="auto" spacing={4} pt={16} px={8}>
@@ -43,9 +30,9 @@ const Page = () => {
           color={`mode.${colorMode}.heading`}
           textAlign="center"
         >
-          {data.gcms.portfolioCard.title}
+          {project.title}
         </Heading>
-        {data.gcms.portfolioCard.type.map(i => {
+        {project.type.map(i => {
           return (
             <Tag variantColor="blue" size="lg" fontWeight={600} ml={4}>
               {i}
@@ -55,7 +42,7 @@ const Page = () => {
       </Stack>
       <Stack maxW={1000} mx="auto" mt={8} pb={16} px={8}>
         <ReactMarkdown
-          source={data.gcms.portfolioCard.body.markdown}
+          source={project.body.markdown}
           escapeHtml={false}
           renderers={{
             list: props => (
@@ -63,22 +50,26 @@ const Page = () => {
                 {props.children}
               </List>
             ),
-            listItem: props => <ListItem {...props}>{props.children}</ListItem>,
+            listItem: props => (
+              <ListItem {...props} display="flex">
+                {props.children}
+              </ListItem>
+            ),
             paragraph: props => (
               <Text {...props} mb={6}>
                 {props.children}
               </Text>
             ),
             link: props => (
-              <a
+              <Link
                 {...props}
                 style={{
                   color: theme.colors.mode[colorMode].link,
-                  display: "flex-inline",
+                  display: "flex",
                 }}
               >
                 {props.children}
-              </a>
+              </Link>
             ),
             image: props => <Image {...props} rounded="lg" />,
             heading: props => (
@@ -86,19 +77,15 @@ const Page = () => {
                 {props.children}
               </Heading>
             ),
-            text: props => (
-              <Text {...props} d="flex-inline">
-                {props.children}
-              </Text>
-            ),
+            text: Text,
           }}
         />
         <LightMode>
-          <Link to="/">
+          <GatsbyLink to="/">
             <Button variantColor="primary" size="lg" mt={6}>
               Go back home
             </Button>
-          </Link>
+          </GatsbyLink>
         </LightMode>
       </Stack>
     </Layout>
