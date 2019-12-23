@@ -14,12 +14,12 @@ const topNavLinks = [
   "Recipes",
 ]
 
-const utilsNavLinks = ["useClipboard", "useDisclosure", "useTheme"]
+// const utilsNavLinks = ["useClipboard", "useDisclosure", "useTheme"]
 
 const NavGroupHeading = props => (
   <Heading
-    fontSize="xs"
-    color="gray.400"
+    fontSize="sm"
+    color="gray.500"
     letterSpacing="wide"
     mb={2}
     textTransform="uppercase"
@@ -27,10 +27,20 @@ const NavGroupHeading = props => (
   />
 )
 
-export const SideNavContent = ({ contentHeight = "calc(100vh)", ...props }) => {
+export const SideNavContent = ({
+  pathName,
+  contentHeight = "calc(100vh)",
+  ...props
+}) => {
   const { colorMode } = useColorMode()
   return (
-    <Box position="relative" overflowY="auto" borderRightWidth="1px" {...props}>
+    <Box
+      position="relative"
+      overflowY="auto"
+      borderRightWidth="1px"
+      borderRightColor={`mode.${colorMode}.cardBG`}
+      {...props}
+    >
       <Box
         as="nav"
         top="0"
@@ -53,7 +63,7 @@ export const SideNavContent = ({ contentHeight = "calc(100vh)", ...props }) => {
 
         <Box mb="8">
           {topNavLinks.map(link => (
-            <TopNavLink key={link} href={stringToUrl(link)}>
+            <TopNavLink key={link} pathName={pathName} href={stringToUrl(link)}>
               {link}
             </TopNavLink>
           ))}
@@ -62,16 +72,11 @@ export const SideNavContent = ({ contentHeight = "calc(100vh)", ...props }) => {
         <Box mb="10">
           <NavGroupHeading>Components</NavGroupHeading>
           {components.map(link => (
-            <ComponentLink key={link} href={stringToUrl(link)}>
-              {link}
-            </ComponentLink>
-          ))}
-        </Box>
-
-        <Box mb="10">
-          <NavGroupHeading>Utilities</NavGroupHeading>
-          {utilsNavLinks.map(link => (
-            <ComponentLink key={link} href={stringToUrl(link)}>
+            <ComponentLink
+              key={link}
+              pathName={pathName}
+              href={stringToUrl(link)}
+            >
               {link}
             </ComponentLink>
           ))}

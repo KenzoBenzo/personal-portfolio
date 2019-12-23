@@ -31,7 +31,7 @@ const DocsNavigation = () => {
       justifyContent={["space-between", "space-between", "flex-end"]}
       backgroundColor={`mode.${colorMode}.background`}
       borderBottomWidth="1px"
-      borderBottom={`mode.${colorMode}.icon`}
+      borderBottomColor={`mode.${colorMode}.cardBG`}
       zIndex={0}
     >
       <Link to="/">

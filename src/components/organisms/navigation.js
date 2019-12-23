@@ -111,7 +111,7 @@ const Navigation = () => {
       <Stack isInline display={["none", "none", "flex"]}>
         <Link to="/docs/">
           <Button variantColor="gray" variant="ghost" mx="auto">
-            Design Docs
+            Docs
           </Button>
         </Link>
         <Link to="/about-me/">

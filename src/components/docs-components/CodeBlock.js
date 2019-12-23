@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import lightTheme from "prism-react-renderer/themes/nightOwlLight"
+// import lightTheme from "prism-react-renderer/themes/nightOwlLight"
 import darkTheme from "prism-react-renderer/themes/nightOwl"
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live"
 // import Highlight, { defaultProps } from "prism-react-renderer";
@@ -9,7 +9,7 @@ import * as Formik from "formik"
 import FocusLock from "react-focus-lock"
 import Lorem from "react-lorem-component"
 
-const { Box, Button, useClipboard, useColorMode } = Chakra
+const { Box, Button, useClipboard } = Chakra
 
 export const liveEditorStyle = {
   fontSize: 14,
@@ -55,26 +55,23 @@ const CopyButton = props => (
     size="sm"
     position="absolute"
     textTransform="uppercase"
-    variantColor="teal"
+    variantColor="primary"
     fontSize="xs"
     height="24px"
-    top={0}
+    top="1em"
     zIndex="1"
-    right="1.25em"
+    right="1em"
     {...props}
   />
 )
 
 const EditableNotice = props => {
-  const { colorMode } = useColorMode()
-
   return (
     <Box
       position="absolute"
       width="full"
-      top="-1.25em"
+      top="0.5em"
       roundedTop="10px"
-      bg={`mode.${colorMode}.cardBG`}
       py="2"
       zIndex="0"
       letterSpacing="wide"
@@ -119,9 +116,7 @@ const CodeBlock = ({
   const language = className && className.replace(/language-/, "")
   const { onCopy, hasCopied } = useClipboard(editorCode)
 
-  const { colorMode } = useColorMode()
-  const themes = { light: lightTheme, dark: darkTheme }
-  const theme = themes[colorMode]
+  const theme = darkTheme
 
   const liveProviderProps = {
     theme,

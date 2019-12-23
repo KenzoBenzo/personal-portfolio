@@ -11,17 +11,20 @@ import "./layout.css"
 
 const Main = props => <Box as="main" minH="90vh" mx="auto" {...props} />
 
-const Footer = props => (
-  <footer {...props}>
-    <Divider />
-    <Stack isInline justify="center">
-      <Button variant="ghost">About</Button>
-      <Button variant="ghost">Roadmap</Button>
-      <Button variant="ghost">Release History</Button>
-      <Button variant="ghost">Contribute</Button>
-    </Stack>
-  </footer>
-)
+const Footer = props => {
+  const { colorMode } = useColorMode()
+  return (
+    <footer {...props}>
+      <Divider borderColor={`mode.${colorMode}.cardBG`} />
+      <Stack isInline justify="center">
+        <Button variant="ghost">About</Button>
+        <Button variant="ghost">Roadmap</Button>
+        <Button variant="ghost">Release History</Button>
+        <Button variant="ghost">Contribute</Button>
+      </Stack>
+    </footer>
+  )
+}
 
 const Layout = ({ children }) => {
   const { colorMode } = useColorMode()

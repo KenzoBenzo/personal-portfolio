@@ -3,14 +3,15 @@ name: Button
 menu: Components
 ---
 
+import { Button, Stack } from "@chakra-ui/core"
+
 # Button Component
 
 A button will go here
 
-    const ButtonComponent = () => {
-      return(
-        <Button>Click me</Button>
-      )
-    }
-
-<!-- <Button>Click me</Button> -->
+```jsx
+<Stack isInline>
+  <Button>Click me</Button>
+  <Button>Click me</Button>
+</Stack>
+```

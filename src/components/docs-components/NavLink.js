@@ -1,13 +1,18 @@
 import { Box, PseudoBox, useColorMode } from "@chakra-ui/core"
 import { Link as GatsbyLink } from "gatsby"
 import React, { cloneElement, forwardRef } from "react"
+import useLocation from "../../hooks/Location"
 
 const NavLink = ({ children, href, ...props }) => {
   let isActive = false
 
-  // if (pathname === props.href) {
-  //   isActive = true
-  // }
+  let location = useLocation()
+
+  if (location.location.pathname === href) {
+    isActive = true
+  } else {
+    isActive = false
+  }
 
   return (
     <GatsbyLink to={href} {...props}>
@@ -20,7 +25,7 @@ export const stringToUrl = (str, path = "/docs/") => {
   return `${path}${str
     .toLowerCase()
     .split(" ")
-    .join("-")}`
+    .join("-")}/`
 }
 
 export const SideNavLink = forwardRef(({ children, icon, ...props }, ref) => {
@@ -32,10 +37,11 @@ export const SideNavLink = forwardRef(({ children, icon, ...props }, ref) => {
       display="flex"
       cursor="pointer"
       align="center"
-      px="2"
+      px={3}
       py="1"
       transition="all 0.2s"
-      fontWeight="medium"
+      fontSize="sm"
+      fontWeight="500"
       outline="none"
       _focus={{ shadow: "outline" }}
       color={`mode.${colorMode}.text`}
@@ -56,7 +62,7 @@ export const TopNavLink = forwardRef(({ href, ...props }, ref) => {
           ref={ref}
           aria-current={isActive ? "page" : undefined}
           _hover={{ color: !isActive ? "inherit" : null }}
-          {...(isActive && { color: "blue.500", fontWeight: "semibold" })}
+          {...(isActive && { color: "purple.500", fontWeight: "700" })}
           {...props}
         />
       )}
@@ -67,8 +73,8 @@ export const TopNavLink = forwardRef(({ href, ...props }, ref) => {
 export const ComponentLink = forwardRef(({ href, ...props }, ref) => {
   const { colorMode } = useColorMode()
   const hoverColor = { light: "gray.900", dark: "whiteAlpha.900" }
-  const activeColor = { light: "teal.800", dark: "teal.200" }
-  const activeBg = { light: "teal.50", dark: "#308c7a4d" }
+  const activeColor = { light: "purple.500", dark: "purple.200" }
+  const activeBg = { light: "purple.100", dark: "purple.800" }
 
   return (
     <NavLink href={href}>
@@ -82,9 +88,11 @@ export const ComponentLink = forwardRef(({ href, ...props }, ref) => {
           }}
           {...(isActive && {
             bg: activeBg[colorMode],
-            rounded: "sm",
+            rounded: "md",
             color: activeColor[colorMode],
-            _hover: {},
+            _hover: {
+              transform: "translateX(2px)",
+            },
           })}
           {...props}
         />
