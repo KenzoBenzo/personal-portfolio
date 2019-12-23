@@ -1,14 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
-// import { useStaticQuery, graphql } from "gatsby"
 import { Divider, Stack, Button, Box, useColorMode } from "@chakra-ui/core"
 import { MDXProvider } from "@mdx-js/react"
 import MDXComponents from "../docs-components/MDXComponents"
 import SideNav from "../docs-components/SideNav"
 import Banner from "../organisms/banner"
-import Navigation from "../organisms/navigation"
+import DocsNavigation from "../docs-components/docsNavigation"
 
-// import Header from "../header"
 import "./layout.css"
 
 const Main = props => <Box as="main" minH="90vh" mx="auto" {...props} />
@@ -31,7 +29,6 @@ const Layout = ({ children }) => {
   return (
     <MDXProvider components={MDXComponents}>
       <Banner />
-      <Navigation />
       <Box backgroundColor={`mode.${colorMode}.background`}>
         <SideNav
           display={["none", null, "block"]}
@@ -43,6 +40,7 @@ const Layout = ({ children }) => {
           backgroundColor={`mode.${colorMode}.background`}
           py={2}
         >
+          <DocsNavigation />
           <Main maxWidth="46rem" pt={8} px={5}>
             {children}
           </Main>
