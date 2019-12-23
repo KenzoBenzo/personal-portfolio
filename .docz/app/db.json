@@ -1,0 +1,125 @@
+{
+  "config": {
+    "title": "Personal Portfolio",
+    "description": "Makenna Smutz's Personal portfolio for displaying recent work to the world.",
+    "menu": [],
+    "version": "0.1.0",
+    "repository": "https://github.com/KenzoBenzo/personal-portfolio",
+    "native": false,
+    "themeConfig": {
+      "initialColorMode": "dark",
+      "colors": {
+        "header": {
+          "bg": "tomato"
+        }
+      }
+    },
+    "separator": "-"
+  },
+  "entries": [
+    {
+      "key": "src/components/docs/index.mdx",
+      "value": {
+        "name": "Getting Started",
+        "route": "/docs",
+        "id": "1e453d630022ab6d7f25ec27d840c2c9",
+        "filepath": "src/components/docs/index.mdx",
+        "fullpath": "/Users/makennasmutz/Documents/GitHub/personal-portfolio/src/components/docs/index.mdx",
+        "link": "https://github.com/KenzoBenzo/personal-portfolio/edit/master/src/components/docs/index.mdx",
+        "slug": "src-components-docs-index",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "getting-started",
+            "depth": 1,
+            "value": "Getting Started"
+          },
+          {
+            "slug": "hello-world",
+            "depth": 2,
+            "value": "Hello world"
+          }
+        ]
+      }
+    }
+  ],
+  "props": [
+    {
+      "key": "src/pages/index.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Homepage",
+          "methods": [],
+          "actualName": "Homepage"
+        }
+      ]
+    },
+    {
+      "key": "src/components/molecules/DribbbleCard.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "DribbbleCard",
+          "methods": [],
+          "actualName": "DribbbleCard"
+        }
+      ]
+    },
+    {
+      "key": "src/components/molecules/FeatureCard.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "FeatureCard",
+          "methods": [],
+          "actualName": "FeatureCard"
+        }
+      ]
+    },
+    {
+      "key": "src/components/molecules/ProjectCard.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "ProjectCard",
+          "methods": [],
+          "actualName": "ProjectCard"
+        }
+      ]
+    },
+    {
+      "key": "src/components/molecules/SkillCard.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "SkillCard",
+          "methods": [],
+          "actualName": "SkillCard"
+        }
+      ]
+    },
+    {
+      "key": "src/components/molecules/TestimonialCard.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "TestimonialCard",
+          "methods": [],
+          "actualName": "TestimonialCard"
+        }
+      ]
+    },
+    {
+      "key": "src/components/organisms/ValueHorizontal.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "ValueSection",
+          "methods": [],
+          "actualName": "ValueSection"
+        }
+      ]
+    }
+  ]
+}
