@@ -8,7 +8,7 @@ import {
   useColorMode,
   Button,
 } from "@chakra-ui/core"
-import Layout from "../components/layout"
+import Layout from "../components/layouts/layout"
 import { graphql, useStaticQuery } from "gatsby"
 
 import DribbbleCard from "../components/molecules/DribbbleCard"

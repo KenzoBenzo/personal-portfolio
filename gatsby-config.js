@@ -22,6 +22,13 @@ module.exports = {
         path: `${__dirname}/src/static`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -68,6 +75,14 @@ module.exports = {
         head: true,
         anonymize: true,
         pageTransitionDelay: 0,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        defaultLayouts: {
+          default: require.resolve("./src/components/layouts/docsLayout.js"),
+        },
       },
     },
   ],

@@ -13,7 +13,7 @@ import {
   Link,
 } from "@chakra-ui/core"
 import theme from "../../../theme/theme"
-import Layout from "../layout"
+import Layout from "../layouts/layout"
 import ReactMarkdown from "react-markdown"
 import { Link as GatsbyLink } from "gatsby"
 
