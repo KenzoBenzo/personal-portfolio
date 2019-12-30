@@ -1,8 +1,6 @@
 import React, { useState } from "react"
-// import lightTheme from "prism-react-renderer/themes/nightOwlLight"
 import darkTheme from "prism-react-renderer/themes/nightOwl"
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live"
-// import Highlight, { defaultProps } from "prism-react-renderer";
 import { mdx } from "@mdx-js/react"
 import * as Chakra from "@chakra-ui/core"
 import * as Formik from "formik"
@@ -19,14 +17,6 @@ export const liveEditorStyle = {
   fontFamily: "Menlo,monospace",
   borderRadius: 10,
 }
-
-// const highlightStyle = {
-//   padding: 20,
-//   fontSize: 14,
-//   overflow: "auto",
-//   lineHeight: "1.5",
-//   fontFamily: "Menlo,monospace",
-// };
 
 export const liveErrorStyle = {
   fontFamily: "Menlo, monospace",
@@ -72,13 +62,11 @@ const EditableNotice = props => {
       width="full"
       top="0.5em"
       rounded="lg"
-      // backgroundColor="primary.100"
-      // py="2"
       zIndex="0"
       letterSpacing="wide"
-      color="primary.300"
+      color="gray.500"
       fontSize="xs"
-      fontWeight="semibold"
+      fontWeight="700"
       textAlign="center"
       textTransform="uppercase"
       pointerEvents="none"
