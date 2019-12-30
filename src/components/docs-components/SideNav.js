@@ -1,18 +1,10 @@
-import { Box, Heading, Icon, useColorMode } from "@chakra-ui/core"
+import { Box, Heading, Icon, useColorMode, Button } from "@chakra-ui/core"
 import React from "react"
 import components from "./components"
 import { ComponentLink, stringToUrl, TopNavLink } from "./NavLink"
 import { Link } from "gatsby"
 
-const topNavLinks = [
-  "Getting Started",
-  "Principles",
-  "Style Props",
-  "Color Mode",
-  "Responsive Styles",
-  "Theme",
-  "Recipes",
-]
+const topNavLinks = ["Overview", "Introduction", "Theme"]
 
 // const utilsNavLinks = ["useClipboard", "useDisclosure", "useTheme"]
 
@@ -50,18 +42,37 @@ export const SideNavContent = ({
         px={[8, 8, 8, 12]}
         py={4}
       >
-        <Link to="/">
+        <Link
+          to="/"
+          style={{
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
           <Icon
             name="Logo"
             color={`mode.${colorMode}.logo`}
             size={10}
             w={32}
-            mb={8}
+            h="40px"
+            mt={0}
+            mr={3}
             display={["none", "none", "flex"]}
           />
+          <Link to="/docs/">
+            <Button
+              size="sm"
+              fontWeight="700"
+              h="24px"
+              px={2}
+              letterSpacing="tighter"
+            >
+              docs
+            </Button>
+          </Link>
         </Link>
 
-        <Box mb="8">
+        <Box mt={10} mb={8}>
           {topNavLinks.map(link => (
             <TopNavLink key={link} pathName={pathName} href={stringToUrl(link)}>
               {link}

@@ -1,6 +1,7 @@
 ---
 name: Alert
 menu: Components
+status: experimental
 ---
 
 import { Alert, AlertIcon, Stack } from "@chakra-ui/core"
@@ -9,19 +10,19 @@ import { Alert, AlertIcon, Stack } from "@chakra-ui/core"
 
 ```jsx
 <Stack spacing={4}>
-  <Alert status="success">
+  <Alert status="success" rounded="md">
     <AlertIcon />
     Data uploaded to the server. Fire on!
   </Alert>
-  <Alert status="warning" variant="solid">
+  <Alert status="warning" variant="solid" rounded="md">
     <AlertIcon />
     Data uploaded to the server. Fire on!
   </Alert>
-  <Alert status="info" variant="left-accent">
+  <Alert status="info" variant="left-accent" rounded="md">
     <AlertIcon />
     Chakra is going live on August 30th. Get ready!
   </Alert>
-  <Alert status="error" variant="top-accent">
+  <Alert status="error" variant="top-accent" rounded="md">
     <AlertIcon />
     Data uploaded to the server. Fire on!
   </Alert>

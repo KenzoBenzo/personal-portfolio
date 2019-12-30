@@ -1,51 +1,45 @@
+/*import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+
+const Components = () => {
+  const data = useStaticQuery(graphql`
+    {
+      componentMenu: allMdx(
+        filter: { frontmatter: { menu: { eq: "Components" } } }
+      ) {
+        nodes {
+          frontmatter {
+            name
+          }
+        }
+      }
+    }
+  `)
+  return (
+    <div>
+      {data.componentMenu.nodes.map(component => [component.frontmatter.name])}
+    </div>
+  )
+}*/
+
 const components = [
-  "Accordion",
   "Alert",
-  "AlertDialog",
-  "AspectRatioBox",
-  "Avatar",
   "Badge",
-  "Box",
-  "Breadcrumb",
+  "Blockquote",
   "Button",
+  "Card",
   "Checkbox",
-  "CircularProgress",
-  "CloseButton",
-  "Code",
-  "Collapse",
-  "ControlBox",
-  "Divider",
-  "Drawer",
-  "Editable",
-  "Flex",
-  "FormControl",
-  "Grid",
+  "Dropdown",
   "Heading",
-  "Icon",
-  "IconButton",
-  "Image",
   "Input",
-  "Link",
-  "List",
-  "Menu",
-  "Modal",
-  "NumberInput",
-  "Popover",
-  "Progress",
-  "PseudoBox",
+  "Label",
   "Radio",
-  "SimpleGrid",
   "Select",
-  "Slider",
-  "Spinner",
-  "Stat",
-  "Stack",
-  "Switch",
-  "Tabs",
-  "Tag",
+  "Table",
+  "Tab",
   "Text",
   "Textarea",
-  "Toast",
+  "Toggle",
   "Tooltip",
 ]
 export default components

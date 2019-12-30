@@ -2,6 +2,7 @@ import { Box, PseudoBox, useColorMode } from "@chakra-ui/core"
 import { Link as GatsbyLink } from "gatsby"
 import React, { cloneElement, forwardRef } from "react"
 import useLocation from "../../hooks/Location"
+import PropTypes from "prop-types"
 
 const NavLink = ({ children, href, ...props }) => {
   let isActive = false
@@ -72,7 +73,7 @@ export const TopNavLink = forwardRef(({ href, ...props }, ref) => {
 
 export const ComponentLink = forwardRef(({ href, ...props }, ref) => {
   const { colorMode } = useColorMode()
-  const hoverColor = { light: "gray.900", dark: "whiteAlpha.900" }
+  const hoverColor = { light: "gray.900", dark: "gray.50" }
   const activeColor = { light: "purple.500", dark: "purple.200" }
   const activeBg = { light: "purple.100", dark: "purple.800" }
 
@@ -100,3 +101,7 @@ export const ComponentLink = forwardRef(({ href, ...props }, ref) => {
     </NavLink>
   )
 })
+
+ComponentLink.propTypes = {
+  href: PropTypes.node.isRequired,
+}

@@ -42,10 +42,10 @@ const LiveCodePreview = props => (
     as={LivePreview}
     fontFamily="body"
     mt={5}
-    p={3}
+    p={4}
     border="1px"
     borderColor="inherit"
-    rounded="md"
+    rounded="lg"
     {...props}
   />
 )
@@ -71,11 +71,12 @@ const EditableNotice = props => {
       position="absolute"
       width="full"
       top="0.5em"
-      roundedTop="10px"
-      py="2"
+      rounded="lg"
+      // backgroundColor="primary.100"
+      // py="2"
       zIndex="0"
       letterSpacing="wide"
-      color="gray.400"
+      color="primary.300"
       fontSize="xs"
       fontWeight="semibold"
       textAlign="center"

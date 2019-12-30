@@ -1,10 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
+// import { useStaticQuery, graphql } from "gatsby"
+
 import { Divider, Stack, Button, Box, useColorMode } from "@chakra-ui/core"
 import { MDXProvider } from "@mdx-js/react"
 import MDXComponents from "../docs-components/MDXComponents"
 import SideNav from "../docs-components/SideNav"
-import Banner from "../organisms/banner"
 import DocsNavigation from "../docs-components/docsNavigation"
 
 import "./layout.css"
@@ -26,12 +27,23 @@ const Footer = props => {
   )
 }
 
-const Layout = ({ children }) => {
+const Layout = ({ children, ...props }) => {
   const { colorMode } = useColorMode()
-
+  /*  const data = useStaticQuery(graphql`
+    query($id: String!) {
+      mdx(id: { eq: $id }) {
+        id
+        body
+        frontmatter {
+          name
+          status
+        }
+      }
+    }
+  `)*/
   return (
     <MDXProvider components={MDXComponents}>
-      <Banner />
+      {/* <Banner /> */}
       <Box backgroundColor={`mode.${colorMode}.background`}>
         <SideNav
           display={["none", null, "block"]}
