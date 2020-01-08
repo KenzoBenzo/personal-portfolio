@@ -27,7 +27,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const projectTemplate = path.resolve(
-    `./src/components/templates/projectTemplate.js`
+    `./src/components/templates/projectTemplate.jsx`
   )
   result.data.gcms.portfolioCards.forEach(project => {
     createPage({

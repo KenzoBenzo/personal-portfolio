@@ -1,6 +1,7 @@
 {
   "name": "personal-portfolio",
-  "private": true,
+  "private": false,
+  "license": "MIT",
   "description": "Makenna Smutz's Personal portfolio for displaying recent work to the world.",
   "version": "0.1.0",
   "author": "Makenna Smutz <makennasmutz@gmail.com>",
@@ -40,7 +41,6 @@
   "devDependencies": {
     "prettier": "^1.18.2"
   },
-  "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
     "prodserve": "gatsby build && gatsby serve",
