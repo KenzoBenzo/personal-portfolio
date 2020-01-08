@@ -1,7 +1,16 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { Link as GatsbyLink } from "gatsby"
 
-import { Divider, Stack, Button, Box, useColorMode } from "@chakra-ui/core"
+import {
+  Divider,
+  Stack,
+  Button,
+  Box,
+  useColorMode,
+  Link,
+  Badge,
+} from "@chakra-ui/core"
 import { MDXProvider } from "@mdx-js/react"
 import MDXComponents from "../docs-components/MDXComponents"
 import SideNav from "../docs-components/SideNav"
@@ -17,10 +26,19 @@ const Footer = props => {
     <footer {...props}>
       <Divider borderColor={`mode.${colorMode}.cardBG`} />
       <Stack isInline justify="center">
-        <Button variant="ghost">About</Button>
-        <Button variant="ghost">Roadmap</Button>
-        <Button variant="ghost">Release History</Button>
-        <Button variant="ghost">Contribute</Button>
+        <GatsbyLink to="/about-me/">
+          <Button variant="ghost">About</Button>
+        </GatsbyLink>
+        {/* <Button variant="ghost">Release History</Button> */}
+        <Link href="https://github.com/kenzoBenzo/personal-portfolio">
+          <Button variant="ghost">Contribute</Button>
+        </Link>
+        <Button variant="ghost">
+          Roadmap
+          <Badge fontSize="10px" ml={2} variantColor="primary">
+            soon
+          </Badge>
+        </Button>
       </Stack>
     </footer>
   )

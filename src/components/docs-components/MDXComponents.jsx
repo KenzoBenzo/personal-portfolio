@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/core"
 import { Link as GatsbyLink } from "gatsby"
 import CodeBlock from "./CodeBlock"
+import theme from "../../../theme/theme"
 
 const Pre = props => <Box my="2em" rounded="sm" {...props} />
 
@@ -114,6 +115,22 @@ const Quote = props => {
   )
 }
 
+const StyledLink = ({ href, ...props }) => {
+  const { colorMode } = useColorMode()
+  return (
+    <GatsbyLink to={href}>
+      <Link
+        {...props}
+        color={`mode.${colorMode}.link`}
+        textDecoration="none"
+        style={{
+          display: "inline-flex",
+        }}
+      />
+    </GatsbyLink>
+  )
+}
+
 const MDXComponents = {
   h1: props => (
     <Heading as="h1" size="xl" my="1em" fontWeight="900" {...props} />
@@ -129,11 +146,7 @@ const MDXComponents = {
   table: Table,
   th: THead,
   td: TData,
-  a: ({ href, ...props }) => (
-    <GatsbyLink to={href}>
-      <Link {...props} />
-    </GatsbyLink>
-  ),
+  a: StyledLink,
   p: props => <Text as="p" mt={4} lineHeight="tall" {...props} />,
   ul: props => <Box as="ul" pt="8px" pl="16px" {...props} />,
   ol: props => <Box as="ol" pt="8px" pl="16px" {...props} />,

@@ -66,6 +66,7 @@ export const SideNavContent = ({
               h="24px"
               px={2}
               letterSpacing="tighter"
+              display={["none", "none", "flex"]}
             >
               docs
             </Button>

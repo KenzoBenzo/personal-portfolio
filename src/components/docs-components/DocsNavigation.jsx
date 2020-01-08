@@ -34,7 +34,7 @@ const DocsNavigation = () => {
       borderBottomColor={`mode.${colorMode}.cardBG`}
       zIndex={0}
     >
-      <Link to="/">
+      <Link to="/" style={{ height: "40px" }}>
         <Icon
           name="Logo"
           color={`mode.${colorMode}.logo`}

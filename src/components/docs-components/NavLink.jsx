@@ -56,14 +56,29 @@ export const SideNavLink = forwardRef(({ children, icon, ...props }, ref) => {
 })
 
 export const TopNavLink = forwardRef(({ href, ...props }, ref) => {
+  const { colorMode } = useColorMode()
+  const hoverColor = { light: "gray.900", dark: "gray.50" }
+  const activeColor = { light: "purple.500", dark: "purple.200" }
+  const activeBg = { light: "purple.50", dark: "purple.800" }
   return (
     <NavLink href={href}>
       {isActive => (
         <SideNavLink
           ref={ref}
           aria-current={isActive ? "page" : undefined}
-          _hover={{ color: !isActive ? "inherit" : null }}
-          {...(isActive && { color: "purple.500", fontWeight: "700" })}
+          _hover={{
+            color: hoverColor[colorMode],
+            transform: "translateX(2px)",
+          }}
+          {...(isActive && {
+            bg: activeBg[colorMode],
+            rounded: "md",
+            color: activeColor[colorMode],
+            _hover: {
+              transform: "translateX(2px)",
+            },
+            fontWeight: 700,
+          })}
           {...props}
         />
       )}
@@ -75,7 +90,7 @@ export const ComponentLink = forwardRef(({ href, ...props }, ref) => {
   const { colorMode } = useColorMode()
   const hoverColor = { light: "gray.900", dark: "gray.50" }
   const activeColor = { light: "purple.500", dark: "purple.200" }
-  const activeBg = { light: "purple.100", dark: "purple.800" }
+  const activeBg = { light: "purple.50", dark: "purple.800" }
 
   return (
     <NavLink href={href}>
@@ -94,6 +109,7 @@ export const ComponentLink = forwardRef(({ href, ...props }, ref) => {
             _hover: {
               transform: "translateX(2px)",
             },
+            fontWeight: 700,
           })}
           {...props}
         />

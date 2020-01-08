@@ -60,16 +60,16 @@ const Page = ({ pageContext: { project } }) => {
                 {props.children}
               </Text>
             ),
-            link: props => (
-              <Link
-                {...props}
-                style={{
-                  color: theme.colors.mode[colorMode].link,
-                  display: "flex",
-                }}
-              >
-                {props.children}
-              </Link>
+            link: ({ href, ...props }) => (
+              <GatsbyLink to={href}>
+                <Link
+                  {...props}
+                  style={{
+                    display: "inline-flex",
+                    color: theme.colors.mode[colorMode].link,
+                  }}
+                />
+              </GatsbyLink>
             ),
             image: props => <Image {...props} rounded="lg" />,
             heading: props => (
