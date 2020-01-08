@@ -77,7 +77,9 @@ const HeroComponent = ({ title, flare, subtitle, ctaText }) => {
             <PopoverHeader>Hey, I'm Kenna.</PopoverHeader>
             <PopoverBody>
               I love building websites for SaaS products and wanted to show off
-              a bit of what I do. This page uses me as the product!
+              a bit of what I do. This page uses me as the product, using 3rd
+              person! Despite the 3rd person cringeyness, everything displayed
+              is true!
             </PopoverBody>
           </PopoverContent>
         </Popover>
