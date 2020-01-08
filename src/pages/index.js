@@ -197,7 +197,7 @@ const features = [
   },
   {
     icon: "abstract3",
-    title: "Cutsomer centric",
+    title: "Customer centric",
     description:
       "The silver lining of Kenna's workflow, is the customer and their needs - focused approach.",
   },
