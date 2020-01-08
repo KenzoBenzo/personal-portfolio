@@ -48,7 +48,7 @@ const HeroComponent = ({ title, flare, subtitle, ctaText }) => {
         width={[
           "100%", // base
           "100%", // 480px upwards
-          "50%", // 480px upwards
+          "50%", // 768px upwards
         ]}
         mr={[0, 0, 16]}
         mb={[16, 16, 0]}
@@ -64,7 +64,7 @@ const HeroComponent = ({ title, flare, subtitle, ctaText }) => {
       >
         <Popover>
           <PopoverTrigger>
-            <Badge variantColor="red" mb={4}>
+            <Badge variantColor="red" mb={4} cursor="pointer">
               story behind this site? click me
             </Badge>
           </PopoverTrigger>
