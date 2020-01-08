@@ -4,7 +4,7 @@ import components from "./components"
 import { ComponentLink, stringToUrl, TopNavLink } from "./NavLink"
 import { Link } from "gatsby"
 
-const topNavLinks = ["Overview", "Introduction", "Theme"]
+const topNavLinks = ["Theme"]
 
 // const utilsNavLinks = ["useClipboard", "useDisclosure", "useTheme"]
 
@@ -73,6 +73,7 @@ export const SideNavContent = ({
         </Link>
 
         <Box mt={10} mb={8}>
+          <TopNavLink href="/docs/">Docs Introduction</TopNavLink>
           {topNavLinks.map(link => (
             <TopNavLink key={link} pathName={pathName} href={stringToUrl(link)}>
               {link}

@@ -8,6 +8,7 @@ import {
   PseudoBox,
   Text,
   useColorMode,
+  Divider,
 } from "@chakra-ui/core"
 import { Link as GatsbyLink } from "gatsby"
 import CodeBlock from "./CodeBlock"
@@ -98,20 +99,33 @@ const DocsHeading = props => (
   </Heading>
 )
 
+const Quote = props => {
+  const { colorMode } = useColorMode()
+  return (
+    <Callout
+      mt={6}
+      rounded="lg"
+      variant="left-accent"
+      color={colorMode === "light" ? "blue.900" : "blue.100"}
+      status="info"
+      css={{ "> *:first-of-type": { marginTop: 0 } }}
+      {...props}
+    />
+  )
+}
+
 const MDXComponents = {
-  h1: props => <Heading as="h1" size="xl" my="1em" {...props} />,
-  h2: props => (
-    <DocsHeading as="h2" fontWeight="semibold" size="lg" {...props} />
+  h1: props => (
+    <Heading as="h1" size="xl" my="1em" fontWeight="900" {...props} />
   ),
-  h3: props => <DocsHeading as="h3" size="md" fontWeight="medium" {...props} />,
-  inlineCode: props => (
-    <Code variantColor="yellow" fontSize="0.84em" {...props} />
-  ),
+  h2: props => <DocsHeading as="h2" size="lg" fontWeight="800" {...props} />,
+  h3: props => <DocsHeading as="h3" size="md" fontWeight="700" {...props} />,
+  inlineCode: props => <Code variantColor="blue" fontSize="xs" {...props} />,
   code: CodeBlock,
   pre: Pre,
   kbd: Kbd,
-  br: props => <Box height="24px" {...props} />,
-  hr: props => <Box as="hr" borderTopWidth="1px" my={8} {...props} />,
+  br: props => <Box height="16px" {...props} />,
+  hr: props => <Divider borderColor="gray.200" my={8} {...props} />,
   table: Table,
   th: THead,
   td: TData,
@@ -124,15 +138,7 @@ const MDXComponents = {
   ul: props => <Box as="ul" pt="8px" pl="16px" {...props} />,
   ol: props => <Box as="ol" pt="8px" pl="16px" {...props} />,
   li: props => <Box as="li" pb="4px" {...props} />,
-  blockquote: props => (
-    <Callout
-      mt={4}
-      variant="left-accent"
-      status="warning"
-      css={{ "> *:first-of-type": { marginTop: 0 } }}
-      {...props}
-    />
-  ),
+  blockquote: Quote,
 }
 
 export default MDXComponents
