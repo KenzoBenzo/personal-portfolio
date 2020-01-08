@@ -12,7 +12,6 @@ import {
   Image,
   Link,
 } from "@chakra-ui/core"
-import theme from "../../../theme/theme"
 import Layout from "../layouts/layout"
 import ReactMarkdown from "react-markdown"
 import { Link as GatsbyLink } from "gatsby"
@@ -64,9 +63,9 @@ const Page = ({ pageContext: { project } }) => {
               <GatsbyLink to={href}>
                 <Link
                   {...props}
+                  color={`mode.${colorMode}.link`}
                   style={{
                     display: "inline-flex",
-                    color: theme.colors.mode[colorMode].link,
                   }}
                 />
               </GatsbyLink>

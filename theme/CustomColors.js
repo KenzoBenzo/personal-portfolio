@@ -91,7 +91,7 @@ const customColors = {
       text: "#EFF2FB",
       heading: "#fff",
       icon: "#486581",
-      link: "#EB99FF",
+      link: "#F8CCFF",
     },
   },
 }

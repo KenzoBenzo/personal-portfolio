@@ -11,10 +11,10 @@ const { Box, Button, useClipboard } = Chakra
 
 export const liveEditorStyle = {
   fontSize: 14,
+  fontFamily: "Fira Code, monospace",
   marginBottom: 32,
   marginTop: 32,
   overflowX: "auto",
-  fontFamily: "Menlo,monospace",
   borderRadius: 10,
 }
 
@@ -105,13 +105,11 @@ const CodeBlock = ({
   const language = className && className.replace(/language-/, "")
   const { onCopy, hasCopied } = useClipboard(editorCode)
 
-  const theme = darkTheme
-
   const liveProviderProps = {
-    theme,
+    theme: darkTheme,
     language,
     code: editorCode,
-    transformCode: code => "/** @jsx mdx */" + code,
+    transformCode: code => "/** @jsx mdx JSON graphql */" + code,
     scope: {
       ...Chakra,
       ...Formik,

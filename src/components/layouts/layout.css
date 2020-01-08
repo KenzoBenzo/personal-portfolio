@@ -1,10 +1,17 @@
 @import url("https://rsms.me/inter/inter.css");
+@import url("https://fonts.googleapis.com/css?family=Fira+Code");
 @supports (font-variation-settings: normal) {
   html {
     font-family: "Inter var", sans-serif;
     background: #fff;
   }
 }
+
+pre,
+code {
+  font-family: "Fira Code", monospace;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;

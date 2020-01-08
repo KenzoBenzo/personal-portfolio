@@ -12,9 +12,10 @@ import {
 } from "@chakra-ui/core"
 import { Link as GatsbyLink } from "gatsby"
 import CodeBlock from "./CodeBlock"
-import theme from "../../../theme/theme"
 
-const Pre = props => <Box my="2em" rounded="sm" {...props} />
+const Pre = props => (
+  <Box my="2em" style={{ fontSize: "16px" }} rounded="sm" {...props} />
+)
 
 const Table = props => (
   <Box as="table" textAlign="left" mt="32px" width="full" {...props} />
