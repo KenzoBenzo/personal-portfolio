@@ -12,9 +12,9 @@ import {
   Badge,
 } from "@chakra-ui/core"
 import { MDXProvider } from "@mdx-js/react"
-import MDXComponents from "../docs-components/MDXComponents"
-import SideNav from "../docs-components/SideNav"
-import DocsNavigation from "../docs-components/docsNavigation"
+import MDXComponents from "../docsComponents/MDXComponents"
+import SideNav from "../docsComponents/SideNav"
+import DocsNavigation from "../docsComponents/DocsNavigation"
 
 import "./layout.css"
 
