@@ -11,7 +11,7 @@ import {
   LightMode,
   Box,
 } from "@chakra-ui/core"
-import Layout from "../components/layout"
+import Layout from "../components/layouts/layout"
 
 const ContactPage = () => {
   const { colorMode } = useColorMode()

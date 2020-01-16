@@ -1,0 +1,40 @@
+---
+name: Button
+menu: Components
+---
+
+# Button Component
+
+Buttons are pinacle components in any digital system. A button should be used for action items paired with a javascript handler or link wrapper.
+
+## Variants
+The default variant is solid. Any of these buttons can be used in context. Importance level is ranked from:
+- `solid` - primary
+- `outline` - secondary
+- `ghost` - tertiary
+
+```jsx
+<Stack isInline>
+  <Button>Click me</Button>
+  <Button variant='outline'>Click me</Button>
+  <Button variant='ghost'>Click me</Button>
+  <Button variant='link'>Click me</Button>
+</Stack>
+```
+
+## Colors
+
+To change the color of the button component, you'll need to use `variantColor` as it is a themed component. Simply using the `color` prop will only change the color of the text.
+
+Buttons in color (not default gray), should use discretiion about font weight and text color for accessibility purposes.
+
+```jsx
+<Stack isInline>
+  <Button>Click me</Button>
+  <Button variantColor='primary' fontWeight={700}>Click me</Button>
+  <Button variantColor='blue' fontWeight={700}>Click me</Button>
+  <Button variantColor='red' fontWeight={700}>Click me</Button>
+  <Button variantColor='yellow' fontWeight={700}>Click me</Button>
+  <Button variantColor='green' fontWeight={700}>Click me</Button>
+</Stack>
+```

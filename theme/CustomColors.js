@@ -78,7 +78,7 @@ const customColors = {
     light: {
       logo: "#102a43",
       background: "#fff",
-      cardBG: "#F6FAFF",
+      cardBG: "#EFF2FB",
       text: "#334E68",
       heading: "#102a43",
       icon: "#9FB3C8",
@@ -91,7 +91,7 @@ const customColors = {
       text: "#EFF2FB",
       heading: "#fff",
       icon: "#486581",
-      link: "#EB99FF",
+      link: "#F8CCFF",
     },
   },
 }

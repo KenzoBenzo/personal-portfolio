@@ -13,9 +13,9 @@ const customTheme = {
     ...customColors,
   },
   fonts: {
-    body: "system-ui, sans-serif",
+    body: "Inter var, sans-serif",
     heading: "Inter var, sans-serif",
-    mono: "Menlo, monospace",
+    mono: "Fira Code, monospace",
   },
   fontSizes: {
     xs: "12px",

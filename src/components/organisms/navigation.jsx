@@ -27,7 +27,7 @@ const Navigation = () => {
       px={[8, 8, 8, 12]}
       isInline
       justifyContent="space-between"
-      background={`mode${colorMode}.background`}
+      backgroundColor={`mode.${colorMode}.background`}
     >
       <Link to="/">
         <Icon name="Logo" color={`mode.${colorMode}.logo`} size={10} w={32} />
@@ -69,11 +69,17 @@ const Navigation = () => {
                 color={`mode.${colorMode}.logo`}
                 size={10}
                 w={32}
+                height={40}
               />
             </Link>
           </DrawerHeader>
           <DrawerBody py={6}>
             <Stack justify="center" align="center">
+              <Link to="/docs/">
+                <Button variantColor="gray" variant="ghost" mx="auto">
+                  Docs
+                </Button>
+              </Link>
               <Link to="/about-me/">
                 <Button variantColor="gray" variant="ghost" mx="auto">
                   About me
@@ -103,6 +109,11 @@ const Navigation = () => {
       </Drawer>
 
       <Stack isInline display={["none", "none", "flex"]}>
+        <Link to="/docs/">
+          <Button variantColor="gray" variant="ghost" mx="auto">
+            Docs
+          </Button>
+        </Link>
         <Link to="/about-me/">
           <Button variantColor="gray" variant="ghost">
             About me

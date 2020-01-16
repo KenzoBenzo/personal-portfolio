@@ -1,0 +1,62 @@
+---
+name: Text
+menu: Components
+---
+
+# Text Component
+
+The text component is a `p` tag with easy styling baked in. 
+
+## Usage
+Some best practices for using the `Text` component include:
+- Don't use this for headings.
+- Do use this for body text, captions, etc.
+- Stick to the gray scale for text colors. This can be defined with the `color` prop.
+
+## Sizes
+
+```jsx
+<Stack>
+    <Text fontSize="xs">Placeholder text</Text>
+    <Text fontSize="sm">Placeholder text</Text>
+    <Text fontSize="md">Placeholder text</Text>
+    <Text fontSize="lg">Placeholder text</Text>
+    <Text fontSize="xl">Placeholder text</Text>
+    <Text fontSize="2xl">Placeholder text</Text>
+    <Text fontSize="3xl">Placeholder text</Text>
+    <Text fontSize="4xl">Placeholder text</Text>
+    <Text fontSize="5xl">Placeholder text</Text>
+    <Text fontSize="6xl">Placeholder text</Text>
+</Stack>
+```
+
+## Outlier cases
+
+### Truncation
+Cutting off a line and adding `...` to indicate that there is more that is not being shown is called Truncation. Its a great way to keep all of your content the same length especially if different people are designing, writing copy, and coding a component.
+
+```jsx
+<Text isTruncated>
+Here is some really long text that will be broken off before the second line starts.
+</Text>
+```
+
+### as Prop
+
+```jsx
+<Stack>
+  <Text as="i">Italic</Text>
+  <Text as="u">Underline</Text>
+  <Text as="abbr">I18N</Text>
+  <Text as="cite">Citation</Text>
+  <Text as="del">Deleted</Text>
+  <Text as="em">Emphasis</Text>
+  <Text as="ins">Inserted</Text>
+  <Text as="kbd">Ctrl + C</Text>
+  <Text as="mark">Highlighted</Text>
+  <Text as="s">Strikethrough</Text>
+  <Text as="sub">sub</Text>
+  <Text as="samp">Sample</Text>
+  <Text as="sup">sup</Text>
+</Stack>
+```

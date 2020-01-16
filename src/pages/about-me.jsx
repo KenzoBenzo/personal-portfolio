@@ -13,7 +13,7 @@ import {
   Link,
   Button,
 } from "@chakra-ui/core"
-import Layout from "../components/layout"
+import Layout from "../components/layouts/layout"
 
 import kenna from "../static/KennaSmutz.jpg"
 

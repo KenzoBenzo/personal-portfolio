@@ -1,10 +1,10 @@
 import React from "react"
-import Footer from "./organisms/footer"
-import Banner from "./organisms/banner"
-import Navigation from "./organisms/navigation"
+import Footer from "../organisms/footer"
+import Banner from "../organisms/banner"
+import Navigation from "../organisms/navigation"
 import "./layout.css"
 import { Stack, useColorMode } from "@chakra-ui/core"
-import customTheme from "../../theme/theme"
+import customTheme from "../../../theme/theme"
 
 export default function Layout({ children }) {
   const { colorMode } = useColorMode()

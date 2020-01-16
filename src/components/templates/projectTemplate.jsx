@@ -12,8 +12,7 @@ import {
   Image,
   Link,
 } from "@chakra-ui/core"
-import theme from "../../../theme/theme"
-import Layout from "../layout"
+import Layout from "../layouts/layout"
 import ReactMarkdown from "react-markdown"
 import { Link as GatsbyLink } from "gatsby"
 
@@ -60,16 +59,16 @@ const Page = ({ pageContext: { project } }) => {
                 {props.children}
               </Text>
             ),
-            link: props => (
-              <Link
-                {...props}
-                style={{
-                  color: theme.colors.mode[colorMode].link,
-                  display: "flex",
-                }}
-              >
-                {props.children}
-              </Link>
+            link: ({ href, ...props }) => (
+              <GatsbyLink to={href}>
+                <Link
+                  {...props}
+                  color={`mode.${colorMode}.link`}
+                  style={{
+                    display: "inline-flex",
+                  }}
+                />
+              </GatsbyLink>
             ),
             image: props => <Image {...props} rounded="lg" />,
             heading: props => (

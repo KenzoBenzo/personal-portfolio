@@ -1,0 +1,38 @@
+---
+name: Badge
+menu: Components
+---
+
+# Badge Component
+
+The badge component is a great way to convey the category of information quickly or to draw special attention to a small string.
+
+## Usage
+
+Some best practices of using badges include:
+
+- Badges should be used sparingly to increase the importance of their existence.
+- Any color in the theme can be used for a badge. Use your discretion to make sure badges are legible.
+- Only the default, subtle variant should be used.
+
+## Colors
+
+To change the color of the badge component, you'll need to use `variantColor` as it is a themed component. Simply using the `color` prop will only change the color of the text.
+
+```jsx
+<Stack isInline spacing={2}>
+    <Badge>Webinar</Badge>
+    <Badge variantColor='primary'>Webinar</Badge>
+    <Badge variantColor='blue'>Webinar</Badge>
+    <Badge variantColor='red'>Webinar</Badge>
+    <Badge variantColor='yellow'>Webinar</Badge>
+    <Badge variantColor='green'>Webinar</Badge>
+</Stack>
+```
+
+## Size
+To change the size of the badge, you'll want to target the `fontSize` property. The default size is `xs`.
+
+```jsx
+<Badge fontSize="sm">Webinar</Badge>
+```
