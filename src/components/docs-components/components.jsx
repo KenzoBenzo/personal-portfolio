@@ -25,21 +25,9 @@ const Components = () => {
 const components = [
   "Alert",
   "Badge",
-  "Blockquote",
   "Button",
-  "Card",
-  "Checkbox",
-  "Dropdown",
-  "Heading",
   "Input",
-  "Label",
-  "Radio",
-  "Select",
-  "Table",
-  "Tab",
   "Text",
-  "Textarea",
   "Toggle",
-  "Tooltip",
 ]
 export default components

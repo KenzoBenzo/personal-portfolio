@@ -3,4 +3,29 @@ name: Input
 menu: Components
 ---
 
-# Input here
+# Input Component
+There are several components that go along with input to create form elements. 
+
+> More form components will be documented soon.
+
+## Example
+
+```jsx
+<FormControl>
+  <FormLabel htmlFor="email">Email address</FormLabel>
+  <Input type="email" id="email" aria-describedby="email-helper-text" focusBorderColor="primary" />
+  <FormHelperText id="email-helper-text">
+    We'll never share your email.
+  </FormHelperText>
+</FormControl>
+```
+
+## Sizes
+
+```jsx
+<Stack>
+    <Input placeholder="large size" size="lg"/>
+    <Input placeholder="medium size" size="md"/>
+    <Input placeholder="small size" size="sm"/>
+</Stack>
+```

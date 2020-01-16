@@ -6,7 +6,40 @@ status: experimental
 
 import { Alert, AlertIcon, Stack } from "@chakra-ui/core"
 
-# Alert will be documented here
+# Alert Component
+
+This component is used sparingly to denote important information. 
+
+
+## Usage
+
+Some examples of where this could be used include:
+
+- To indicate a successful submission of a form or action
+- Inside of documentation when context is needed
+- Indicating a dangerous action like deleting or a potentially unwanted action like leaving without saving
+
+How this should be used:
+- The default, subtle variant should be used for triggered information such as toast messages
+- The left-accent variant should be used for static information such as important information in documentation
+- Additionaly, the `CloseButton` component can be added to an alert to make it dismissable.
+
+## Status
+
+There are 4 statuses with default styling based off of our [custom theme](/docs/theme/). The statuses available are:
+- Success
+- Info
+- Warning
+- Danger
+
+
+## Variants
+
+Although Chakra-ui supports many styling types, we will only use the `subtle` and `left-accent` variants that can be seen below.
+
+### Subtle
+
+The `subtle` variant is the default. No props are needed to denote this.
 
 ```jsx
 <Stack spacing={4}>
@@ -14,17 +47,44 @@ import { Alert, AlertIcon, Stack } from "@chakra-ui/core"
     <AlertIcon />
     Data uploaded to the server. Fire on!
   </Alert>
-  <Alert status="warning" variant="solid" rounded="md">
+  <Alert status="warning" rounded="md">
     <AlertIcon />
     Data uploaded to the server. Fire on!
   </Alert>
-  <Alert status="info" variant="left-accent" rounded="md">
+  <Alert status="info" rounded="md">
     <AlertIcon />
     Chakra is going live on August 30th. Get ready!
   </Alert>
-  <Alert status="error" variant="top-accent" rounded="md">
+  <Alert status="error" rounded="md">
     <AlertIcon />
     Data uploaded to the server. Fire on!
+    <CloseButton position="absolute" right="8px" />
+  </Alert>
+</Stack>
+```
+
+### Left Accent
+
+The `left-accent` variant is great for inline information. It requires the variant prop to be denoted.
+
+```jsx
+<Stack spacing={4}>
+  <Alert status="success" variant='left-accent' rounded="md">
+    <AlertIcon />
+    Data uploaded to the server. Fire on!
+  </Alert>
+  <Alert status="warning" variant='left-accent' rounded="md">
+    <AlertIcon />
+    Data uploaded to the server. Fire on!
+  </Alert>
+  <Alert status="info" variant='left-accent' rounded="md">
+    <AlertIcon />
+    Chakra is going live on August 30th. Get ready!
+  </Alert>
+  <Alert status="error" variant='left-accent' rounded="md">
+    <AlertIcon />
+    Data uploaded to the server. Fire on!
+    <CloseButton position="absolute" right="8px" />
   </Alert>
 </Stack>
 ```

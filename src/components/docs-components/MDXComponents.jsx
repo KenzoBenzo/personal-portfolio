@@ -14,7 +14,7 @@ import { Link as GatsbyLink } from "gatsby"
 import CodeBlock from "./CodeBlock"
 
 const Pre = props => (
-  <Box my="2em" style={{ fontSize: "16px" }} rounded="sm" {...props} />
+  <Box my="2em" fontSize="inherit" rounded="sm" {...props} />
 )
 
 const Table = props => (
@@ -106,13 +106,12 @@ const Quote = props => {
   return (
     <Callout
       mt={6}
-      rounded="lg"
+      rounded="md"
       variant="left-accent"
       color={colorMode === "light" ? "blue.900" : "blue.100"}
       status="info"
       css={{ "> *:first-of-type": { marginTop: 0 } }}
-      {...props}
-    />
+      {...props}>{props.children}</Callout>
   )
 }
 
