@@ -19,7 +19,7 @@ export default () => {
   const data = useStaticQuery(graphql`
     {
       gcms {
-        portfolioCards(where: { status: PUBLISHED }) {
+        portfolioWorks(where: { status: PUBLISHED }) {
           title
           slug
           summary
@@ -38,6 +38,31 @@ export default () => {
   `)
   return (
     <Layout>
+      <Box py={16} px={8} mx='auto'>
+        <Heading
+          as="h2"
+          fontSize="4xl"
+          mb={8}
+          lineHeight="shorter"
+          fontWeight="900"
+          color={`mode.${colorMode}.heading`}
+          textAlign="center"
+        >
+          Projects in My Portfolio
+        </Heading>
+        <Stack maxW={1000} mx="auto" my={4}>
+          {data.gcms.portfolioWorks.map((work, index) => (
+            <ProjectCard
+              key={index}
+              rawTags={work.type}
+              title={work.title}
+              summary={work.summary}
+              link={`/projects/${work.slug}/`}
+            />
+          ))}
+        </Stack>
+      </Box>
+
       <Box maxW="1100px" mx="auto" py={16} px={8}>
         <Heading
           as="h2"
@@ -76,31 +101,6 @@ export default () => {
             </Button>
           </Link>
         </Flex>
-      </Box>
-
-      <Box py={16} px={8}>
-        <Heading
-          as="h2"
-          fontSize="4xl"
-          mb={8}
-          lineHeight="shorter"
-          fontWeight="900"
-          color={`mode.${colorMode}.heading`}
-          textAlign="center"
-        >
-          Projects in My Portfolio
-        </Heading>
-        <Stack maxW={1000} mx="auto" my={4}>
-          {data.gcms.portfolioCards.map((card, index) => (
-            <ProjectCard
-              key={index}
-              rawTags={card.type}
-              title={card.title}
-              summary={card.summary}
-              link={`/projects/${card.slug}/`}
-            />
-          ))}
-        </Stack>
       </Box>
     </Layout>
   )

@@ -41,7 +41,7 @@ const Page = ({ pageContext: { project } }) => {
       </Stack>
       <Stack maxW={1000} mx="auto" mt={8} pb={16} px={8}>
         <ReactMarkdown
-          source={project.body.markdown}
+          source={project.body}
           escapeHtml={false}
           renderers={{
             list: props => (

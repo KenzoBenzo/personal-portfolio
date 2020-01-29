@@ -7,14 +7,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `
       {
         gcms {
-          portfolioCards {
+          portfolioWorks {
             title
             slug
             summary
             type
-            body {
-              markdown
-            }
+            body
           }
         }
       }
@@ -29,7 +27,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const projectTemplate = path.resolve(
     `./src/components/templates/projectTemplate.jsx`
   )
-  result.data.gcms.portfolioCards.forEach(project => {
+  result.data.gcms.portfolioWorks.forEach(project => {
     createPage({
       path: `/projects/${project.slug}/`,
       component: projectTemplate,
