@@ -19,7 +19,7 @@ export default () => {
   const data = useStaticQuery(graphql`
     {
       gcms {
-        portfolioCards(where: { status: PUBLISHED }) {
+        portfolioWorks(where: { status: PUBLISHED }) {
           title
           slug
           summary
@@ -91,7 +91,7 @@ export default () => {
           Projects in My Portfolio
         </Heading>
         <Stack maxW={1000} mx="auto" my={4}>
-          {data.gcms.portfolioCards.map((card, index) => (
+          {data.gcms.portfolioWorks.map((card, index) => (
             <ProjectCard
               key={index}
               rawTags={card.type}
