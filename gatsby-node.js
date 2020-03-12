@@ -12,9 +12,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             slug
             summary
             type
-            body {
-              markdown
-            }
+            body
           }
         }
       }
