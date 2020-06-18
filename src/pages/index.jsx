@@ -34,7 +34,7 @@ const Homepage = () => {
 
       <Hero
         title="Design + Code for Growth"
-        subtitle="A high-performer that makes website creation seamless. Kenna is an energetic 22 year old that excels in execution of design, and frontend development."
+        subtitle="A high-performer that makes website creation seamless. Kenna is an energetic 23 year old that excels in execution of design, and frontend development."
         ctaText="Schedule a Call"
       />
 
