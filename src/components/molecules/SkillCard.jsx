@@ -12,7 +12,7 @@ const SkillCard = ({ icon, title, description, ...props }) => {
         size={20}
         mr={4}
       >
-        <Icon name={icon} size={12} mb={6} />
+        <Icon name={icon} size={12} mb={6} color={`mode.${colorMode}.icon`} />
       </Box>
       <Box>
         <Heading
@@ -21,10 +21,11 @@ const SkillCard = ({ icon, title, description, ...props }) => {
           fontSize="2xl"
           lineHeight="shorter"
           mb={3}
+          color={`mode.${colorMode}.heading`}
         >
           {title}
         </Heading>
-        <Text fontSize="md" lineHeight="short">
+        <Text fontSize="md" lineHeight="short" color={`mode.${colorMode}.text`}>
           {description}
         </Text>
       </Box>

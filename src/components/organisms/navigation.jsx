@@ -76,22 +76,40 @@ const Navigation = () => {
           <DrawerBody py={6}>
             <Stack justify="center" align="center">
               <Link to="/docs/">
-                <Button variantColor="gray" variant="ghost" mx="auto">
+                <Button
+                  variantColor="gray"
+                  variant="ghost"
+                  mx="auto"
+                  color={`mode.${colorMode}.text`}
+                >
                   Docs
                 </Button>
               </Link>
               <Link to="/about-me/">
-                <Button variantColor="gray" variant="ghost" mx="auto">
+                <Button
+                  variantColor="gray"
+                  variant="ghost"
+                  mx="auto"
+                  color={`mode.${colorMode}.text`}
+                >
                   About me
                 </Button>
               </Link>
               <Link to="/contact/">
-                <Button variantColor="gray" variant="ghost">
+                <Button
+                  variantColor="gray"
+                  variant="ghost"
+                  color={`mode.${colorMode}.text`}
+                >
                   Contact
                 </Button>
               </Link>
               <Link to="/projects/">
-                <Button variantColor="gray" variant="ghost">
+                <Button
+                  variantColor="gray"
+                  variant="ghost"
+                  color={`mode.${colorMode}.text`}
+                >
                   My projects
                 </Button>
               </Link>
@@ -110,22 +128,39 @@ const Navigation = () => {
 
       <Stack isInline display={["none", "none", "flex"]}>
         <Link to="/docs/">
-          <Button variantColor="gray" variant="ghost" mx="auto">
+          <Button
+            variantColor="gray"
+            variant="ghost"
+            mx="auto"
+            color={`mode.${colorMode}.text`}
+          >
             Docs
           </Button>
         </Link>
         <Link to="/about-me/">
-          <Button variantColor="gray" variant="ghost">
+          <Button
+            variantColor="gray"
+            variant="ghost"
+            color={`mode.${colorMode}.text`}
+          >
             About me
           </Button>
         </Link>
         <Link to="/contact/">
-          <Button variantColor="gray" variant="ghost">
+          <Button
+            variantColor="gray"
+            variant="ghost"
+            color={`mode.${colorMode}.text`}
+          >
             Contact
           </Button>
         </Link>
         <Link to="/projects/">
-          <Button variantColor="gray" variant="ghost">
+          <Button
+            variantColor="gray"
+            variant="ghost"
+            color={`mode.${colorMode}.text`}
+          >
             My projects
           </Button>
         </Link>
