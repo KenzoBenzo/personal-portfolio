@@ -42,7 +42,7 @@
     "prettier": "^1.18.2"
   },
   "scripts": {
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "prodserve": "gatsby build && gatsby serve",
     "cleandev": "rm -rf node_modules .cache && yarn && gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
